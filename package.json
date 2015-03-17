@@ -10,6 +10,19 @@
     "type": "git",
     "url": "https://github.com/marcosomma/my-prototypes.git"
   },
+  "keywords": [
+    "prototype",
+    "string",
+    "number",
+    "escape",
+    "unescape",
+    "html",
+    "format",
+    "money",
+    "percent",
+    "convert",
+    "crypto"
+  ],
   "author": "Marco Somma <mak.so1979@gmail.com> (http://marcosomma.altervista.org/)",
   "license": "ISC",
   "bugs": {
