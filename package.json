@@ -1,6 +1,6 @@
 {
   "name": "my-prototypes",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Add String and Numbers prototypes in your project.",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,9 @@
     "money",
     "percent",
     "convert",
-    "crypto"
+    "valdator",
+    "seconds",
+    "milliseconds"
   ],
   "author": "Marco Somma <mak.so1979@gmail.com> (http://marcosomma.altervista.org/)",
   "license": "ISC",

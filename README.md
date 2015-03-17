@@ -10,6 +10,9 @@ Add String and Numbers prototypes in your project.
 ### Strin prototypes
 - htmlEscape
 - htmlUnescape
+- validateContent (dateEU, dateUS, time, email, ip-address, alphanumeric and phone)
 
 ### Number prototypes
 - formatMoney
+- getSecond
+- getMilliSecond

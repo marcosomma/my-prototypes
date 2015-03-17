@@ -1,6 +1,7 @@
 /**
  * Created by iMak on 17/03/15.
  */
+var validRegEx = require('./validationRegEx.js');
 
 module.exports = {
     htmlEscape:function() {
@@ -22,5 +23,11 @@ module.exports = {
             .replace(/&#39;/g, "'")
             .replace(/&lt;/g, '<')
             .replace(/&gt;/g, '>');
+    },
+    validateContent:function(reg) {
+        //console.log('validateContent');
+        var string = this;
+        var re = new RegExp(validRegEx[reg]);
+        return re.test(string);
     }
 };

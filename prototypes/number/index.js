@@ -13,5 +13,26 @@ module.exports = {
             i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
             j = (j = i.length) > 3 ? j % 3 : 0;
         return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+    },
+    getSecond: function(h, m, s){
+        //console.log('getSecond');
+        var hours = 0,
+            minutes = 0,
+            seconds = 0,
+            total = 0;
+
+        hours = h * 60 * 60;
+        minutes = m * 60;
+        seconds = s;
+        total = hours + minutes + seconds;
+
+        return total;
+    },
+    getMilliSecond: function(h, m, s){
+        //console.log('getMilliSecond');
+        var seconds = this.getSecond(h, m, s);
+        var total = seconds * 1000;
+
+        return total;
     }
 };
