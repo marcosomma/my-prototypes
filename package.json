@@ -1,0 +1,19 @@
+{
+  "name": "myPrototypes",
+  "version": "0.1.0",
+  "description": "String and Numbers prototypes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcosomma/myPrototypes.git"
+  },
+  "author": "Marco Somma <mak.so1979@gmail.com> (http://marcosomma.altervista.org/)",
+  "license": "git tag 0.1.0",
+  "bugs": {
+    "url": "https://github.com/marcosomma/myPrototypes/issues"
+  },
+  "homepage": "https://github.com/marcosomma/myPrototypes"
+}
