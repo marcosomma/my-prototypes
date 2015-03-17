@@ -134,6 +134,45 @@ describe('#String', function() {
     it('validate +a353 0866656zz is NOT phone', function() {
         String('+a353 0866656zz').validateContent('phone').should.equal(false);
     });
+
+    it('split "." in "test0.test1" and give the first value', function() {
+        String('test0.test1').substringBeforeTo('.').should.equal('test0');
+    });
+
+    it('split "$" in "test0.test1" and give the first value', function() {
+        String('test0.test1').substringBeforeTo('$').should.equal('test0.test1');
+    });
+
+    it('split "." in "test0.test1" and give the second value', function() {
+        String('test0.test1').substringAfterTo('.').should.equal('test1');
+    });
+
+    it('split "$" in "test0.test1" and give the second value', function() {
+        String('test0.test1').substringAfterTo('$').should.equal('test0.test1');
+    });
+
+    it('split "." in "test0.test1.test2.test3" and give the all values after the first', function() {
+        String('test0.test1.test2.test3').substringAfterTo('.').should.have.length(3);
+        String('test0.test1.test2.test3').substringAfterTo('.')[0].should.equal('test1');
+        String('test0.test1.test2.test3').substringAfterTo('.')[1].should.equal('test2');
+        String('test0.test1.test2.test3').substringAfterTo('.')[2].should.equal('test3');
+    });
+
+    it('repeat "test0" for 3 times', function() {
+        String('test0').repeat(3).should.equal('test0test0test0');
+    });
+
+    it('repeat "test0" for 0 times', function() {
+        String('test0').repeat(0).should.equal('');
+    });
+
+    it('capitalize "test" return "Test"', function() {
+        String('test').capitalize().should.equal('Test');
+    });
+
+    it('capitalizeAll "test test Test test" return "Test Test Test Test"', function() {
+        String('test test Test test').capitalizeAll().should.equal('Test Test Test Test');
+    });
 });
 
 describe('#Number', function() {
