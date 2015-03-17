@@ -1,5 +1,5 @@
 {
-  "name": "myPrototypes",
+  "name": "my_prototypes",
   "version": "0.1.0",
   "description": "String and Numbers prototypes",
   "main": "index.js",
@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/marcosomma/myPrototypes/issues"
   },
-  "homepage": "https://github.com/marcosomma/myPrototypes"
+  "homepage": "https://github.com/marcosomma/myPrototypes",
+  "dependencies": {}
 }
