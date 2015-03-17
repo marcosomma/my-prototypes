@@ -10,6 +10,10 @@ describe('#init', function() {
         init().should.equal('prototypes imported');
     });
 
+    it('String converts & into &amp;', function() {
+        String('&').htmlEscape().should.equal('&amp;');
+    });
+
     it('String converts " into &quot;', function() {
         String('"').htmlEscape().should.equal('&quot;');
     });

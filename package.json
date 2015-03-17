@@ -1,10 +1,10 @@
 {
   "name": "my-prototypes",
-  "version": "0.1.5",
-  "description": "String and Numbers prototypes",
+  "version": "0.1.6",
+  "description": "Add String and Numbers prototypes in your project.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test/*.js"
   },
   "repository": {
     "type": "git",
