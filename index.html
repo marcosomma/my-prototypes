@@ -1,0 +1,168 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>My-prototypes</title>
+  <meta name="description" content="String and Numbers prototypes">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">My-prototypes</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">String and Numbers prototypes</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/marcosomma/my-prototypes/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/marcosomma/my-prototypes/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/marcosomma/my-prototypes" class="code">View My-prototypes on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <p><a href="https://codeclimate.com/github/marcosomma/my-prototypes"><img src="https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg" alt="Code Climate"></a> <a href="https://codeclimate.com/github/marcosomma/my-prototypes"><img src="https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg" alt="Test Coverage"></a></p>
+
+<h1>
+<a id="my-prototypes" class="anchor" href="#my-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>my-prototypes</h1>
+
+<p>Add String and Numbers prototypes in your project.</p>
+
+<h5>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h5>
+
+<p><code>npm install my-prototypes</code></p>
+
+<h5>
+<a id="use" class="anchor" href="#use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use</h5>
+
+<p><code>require('my-prototypes').init</code></p>
+
+<hr>
+
+<h2>
+<a id="string-prototypes" class="anchor" href="#string-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>String prototypes</h2>
+
+<ul>
+<li>capitalize</li>
+<li>capitalizeAll</li>
+<li>htmlEscape</li>
+<li>htmlUnescape</li>
+<li>repeat</li>
+<li>substringAfterTo</li>
+<li>substringBeforeTo</li>
+<li>validateContent (dateEU, dateUS, time, email, ip-address, alphanumeric and phone)</li>
+</ul>
+
+<h5>
+<a id="capitalize" class="anchor" href="#capitalize" aria-hidden="true"><span class="octicon octicon-link"></span></a>capitalize</h5>
+
+<p><code>String('test').capitalize()</code> ==&gt; <code>"Test"</code></p>
+
+<h5>
+<a id="capitalizeall" class="anchor" href="#capitalizeall" aria-hidden="true"><span class="octicon octicon-link"></span></a>capitalizeAll</h5>
+
+<p><code>String('test test Test test').capitalizeAll()</code> ==&gt; <code>"Test Test Test Test"</code></p>
+
+<h5>
+<a id="htmlescape" class="anchor" href="#htmlescape" aria-hidden="true"><span class="octicon octicon-link"></span></a>htmlEscape</h5>
+
+<p><code>String('Marco&amp;Co').htmlEscape()</code> ==&gt; <code>Marco&amp;amp;Co</code></p>
+
+<h5>
+<a id="htmlunescape" class="anchor" href="#htmlunescape" aria-hidden="true"><span class="octicon octicon-link"></span></a>htmlUnescape</h5>
+
+<p><code>String('Marco&amp;amp;Co').htmlUnescape()</code> ==&gt; <code>Marco&amp;Co</code></p>
+
+<h5>
+<a id="repeat" class="anchor" href="#repeat" aria-hidden="true"><span class="octicon octicon-link"></span></a>repeat</h5>
+
+<p><code>String('test0').repeat(3)</code> ==&gt; <code>"test0test0test0"</code></p>
+
+<h5>
+<a id="substringbeforeto" class="anchor" href="#substringbeforeto" aria-hidden="true"><span class="octicon octicon-link"></span></a>substringBeforeTo</h5>
+
+<p><code>String('test0.test1').substringBeforeTo('.')</code> ==&gt; <code>"test0"</code></p>
+
+<h5>
+<a id="substringafterto" class="anchor" href="#substringafterto" aria-hidden="true"><span class="octicon octicon-link"></span></a>substringAfterTo</h5>
+
+<p><code>String('test0.test1').substringAfterTo('.')</code> ==&gt; <code>"test1"</code>
+<code>String('test0.test1.test2.test3').substringAfterTo('.')</code> ==&gt; <code>["test1","test2","test3"]</code></p>
+
+<h5>
+<a id="validatecontent" class="anchor" href="#validatecontent" aria-hidden="true"><span class="octicon octicon-link"></span></a>validateContent</h5>
+
+<p><code>String('mak.so1979@gmail.com').validateContent('email')</code> ==&gt; <code>true</code>
+<code>String('mak.so1979gmailcom').validateContent('email')</code> ==&gt; <code>false</code></p>
+
+<hr>
+
+<h2>
+<a id="number-prototypes" class="anchor" href="#number-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Number prototypes</h2>
+
+<ul>
+<li>formatMoney</li>
+<li>getSecond</li>
+<li>getMilliSecond</li>
+</ul>
+
+<h5>
+<a id="formatmoney" class="anchor" href="#formatmoney" aria-hidden="true"><span class="octicon octicon-link"></span></a>formatMoney</h5>
+
+<p>formatMoney(decimals,simbol1,simbol2)</p>
+
+<p><code>Number(1000000.12).formatMoney(2,',','.')</code> ==&gt; <code>"1,000,000.12"</code>
+<code>Number(1000000.12).formatMoney(1,'/','-')</code> ==&gt; <code>"1/000/000-1"</code></p>
+
+<h5>
+<a id="getsecond" class="anchor" href="#getsecond" aria-hidden="true"><span class="octicon octicon-link"></span></a>getSecond</h5>
+
+<p>getSecond(hours,minutes,seconds)</p>
+
+<p><code>Number().getSecond(1,1,1)</code> ==&gt; <code>3661</code></p>
+
+<h5>
+<a id="getsecond-1" class="anchor" href="#getsecond-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>getSecond</h5>
+
+<p>getMilliSecond(hours,minutes,seconds)</p>
+
+<p><code>Number().getMilliSecond(1,1,1)</code> ==&gt; <code>3661000</code></p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/marcosomma" class="avatar"><img src="https://avatars3.githubusercontent.com/u/6088852?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/marcosomma">marcosomma</a> maintains <a href="https://github.com/marcosomma/my-prototypes">My-prototypes</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/marcosomma/my-prototypes/tarball/master" class="tar">tar</a><a href="https://github.com/marcosomma/my-prototypes/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
