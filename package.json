@@ -1,6 +1,6 @@
 {
-  "name": "my_prototypes",
-  "version": "0.1.3",
+  "name": "my-prototypes",
+  "version": "0.1.4",
   "description": "String and Numbers prototypes",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/marcosomma/myPrototypes.git"
+    "url": "https://github.com/marcosomma/my-prototypes.git"
   },
   "author": "Marco Somma <mak.so1979@gmail.com> (http://marcosomma.altervista.org/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/marcosomma/myPrototypes/issues"
+    "url": "https://github.com/marcosomma/my-prototypes/issues"
   },
-  "homepage": "https://github.com/marcosomma/myPrototypes",
+  "homepage": "https://github.com/marcosomma/my-prototypes",
   "dependencies": {},
   "devDependencies": {
     "chai": "^2.1.2",
