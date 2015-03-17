@@ -7,10 +7,12 @@ module.exports = {
         Number.prototype.formatMoney = formatMoney;
         String.prototype.htmlEscape = htmlEscape;
         String.prototype.htmlUnescape = htmlUnescape;
+        return 'prototypes imported';
     }
 };
 
-function htmlEscape(html) {
+function htmlEscape() {
+    var html = this;
     return String(html)
         .replace(/&/g, '&amp;')
         .replace(/"/g, '&quot;')
@@ -18,7 +20,8 @@ function htmlEscape(html) {
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
 };
-function htmlUnescape(html) {
+function htmlUnescape() {
+    var html = this;
     return String(html)
         .replace(/&amp;/g, '&')
         .replace(/&quot;/g, '"')
