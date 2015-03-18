@@ -4,6 +4,7 @@
 var stringPrototypes = require('./src/strings.js');
 var numberPrototypes = require('./src/numbers.js');
 module.exports = {
+
     init : function(){
 
         Number.prototype.formatMoney = numberPrototypes.formatMoney;

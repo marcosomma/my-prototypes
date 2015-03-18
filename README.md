@@ -81,11 +81,10 @@ Add String and Numbers prototypes in your project.
 - getSecond
 - getMilliSecond
 
-**formatMoney**(decimals,simbol1,simbol2)
+**formatMoney**(decimals)
 *Convert integer o float number in a money value*
 
-```Number(1000000.12).formatMoney(2,',','.')``` result ```"1,000,000.12"```
-```Number(1000000.12).formatMoney(1,'/','-')``` result ```"1/000/000-1"```
+```Number(1000000.12).formatMoney(2)``` result ```"1,000,000.12"```
 
 **getSecond**(hours,minutes,seconds)
 *Return seconds*
