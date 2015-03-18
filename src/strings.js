@@ -31,14 +31,14 @@ module.exports = {
         return re.test(string);
     },
     substringBeforeTo : function(str){
-        if (this.indexOf(str) == -1){
+        if (this.indexOf(str) === -1){
             return this;
         }
         var response = this.split(str);
         return response[0];
     },
     substringAfterTo : function(str){
-        if (this.indexOf(str) == -1){
+        if (this.indexOf(str) === -1){
             return this;
         }
         var response = this.split(str);
@@ -55,14 +55,8 @@ module.exports = {
             return '';
         }
         var result = '', pattern = this.valueOf();
-        while (count > 0)
-        {
-            if (count & 1)
-            {
-                result += pattern;
-            }
-            count >>= 1;
-            pattern += pattern;
+        for(var i = 0; i<count; i++){
+            result += pattern;
         }
         return result;
     },
