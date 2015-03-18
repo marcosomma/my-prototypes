@@ -1,8 +1,8 @@
 /**
  * Created by iMak on 17/03/15.
  */
-var stringPrototypes = require('./prototypes/string/index.js');
-var numberPrototypes = require('./prototypes/number/index.js');
+var stringPrototypes = require('./src/strings.js');
+var numberPrototypes = require('./src/numbers.js');
 module.exports = {
     init : function(){
 

@@ -97,7 +97,7 @@ module.exports = {
         return month+'/'+day+'/'+year;
     }
 };
-
+/* istanbul ignore next */
 function getMonth(value){
     var month = '';
     switch (value){
