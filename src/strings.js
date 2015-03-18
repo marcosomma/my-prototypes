@@ -68,7 +68,7 @@ module.exports = {
         var arraySplit = this.split(' '),
             result = '';
         for(var i=0; i<arraySplit.length; i++){
-            if (i!=0){
+            if (i!==0){
                 result += ' ' + arraySplit[i].charAt(0).toUpperCase() + arraySplit[i].slice(1);
             } else {
                 result += arraySplit[i].charAt(0).toUpperCase() + arraySplit[i].slice(1);
