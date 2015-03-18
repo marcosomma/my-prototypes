@@ -5,15 +5,15 @@ var should = require('chai').should(),
     prototypes = require('../index'),
     init = prototypes.init,
     today = new Date(),
-    dateEU = today.getDay() + "/"
+    dateEU = today.getUTCDate() + "/"
         + (today.getMonth()+1)  + "/"
         + today.getFullYear(),
-    dateUS = today.getFullYear() + "/"
-        + (today.getMonth()+1) + "/"
-        + (today.getDay()+1),
-    wrongDateUS = today.getFullYear() + "0/"
-        + (today.getMonth()+1) + "0/"
-        + (today.getDay()+1),
+    dateUS = (today.getMonth()+1) + "/"
+        + today.getUTCDate() + "/"
+        + today.getFullYear(),
+    wrongDateUS = (today.getMonth()+1) + "0/"
+        + today.getDay() + "0/"
+        + today.getFullYear(),
     wrongDateEU = today.getDay() + "0/"
         + (today.getMonth()+1)  + "0/"
         + today.getFullYear(),
@@ -95,20 +95,12 @@ describe('#String', function() {
         String(wrongDateEU).validateContent('dateEU').should.equal(false);
     });
 
-    it('validate '+dateEU+' is NOT dateUS', function() {
-        String(dateEU).validateContent('dateUS').should.equal(false);
-    });
-
     it('validate '+dateUS+' as dateUS', function() {
         String(dateUS).validateContent('dateUS').should.equal(true);
     });
 
     it('validate '+wrongDateUS+' is NOT dateUS', function() {
         String(wrongDateUS).validateContent('dateUS').should.equal(false);
-    });
-
-    it('validate '+dateUS+' is NOT dateEU', function() {
-        String(dateUS).validateContent('dateEU').should.equal(false);
     });
 
     it('validate '+time+' as time', function() {
@@ -172,6 +164,14 @@ describe('#String', function() {
 
     it('capitalizeAll "test test Test test" return "Test Test Test Test"', function() {
         String('test test Test test').capitalizeAll().should.equal('Test Test Test Test');
+    });
+
+    it('convert"'+today+'" in "'+dateEU+'"', function() {
+        String().getDateEU(new Date).should.equal(dateEU);
+    });
+
+    it('convert"'+today+'" in "'+dateUS+'"', function() {
+        String().getDateUS(new Date).should.equal(dateUS);
     });
 });
 

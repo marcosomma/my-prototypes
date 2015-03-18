@@ -13,6 +13,8 @@ Add String and Numbers prototypes in your project.
 ## String prototypes
 - capitalize
 - capitalizeAll
+- getDateEU
+- getDateUS
 - htmlEscape
 - htmlUnescape
 - repeat
@@ -29,6 +31,16 @@ Add String and Numbers prototypes in your project.
 *Capitalize all first letters of all word contained in a sentence separate by space*
 
 ```String('test test Test test').capitalizeAll()``` result ```"Test Test Test Test"```
+
+**getDateEU**
+*Convert ```new Date``` in european format date*
+
+```String().getDateEU(new Date)``` result ```dd/mm/yyyy```
+
+**getDateUS**
+*Convert ```new Date``` in american format date*
+
+```String().getDateUS(new Date)``` result ```mm/dd/yyyy```
 
 **htmlEscape**
 *Convert normal string in a html string*

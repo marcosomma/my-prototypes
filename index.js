@@ -18,6 +18,8 @@ module.exports = {
         String.prototype.repeat = stringPrototypes.repeat;
         String.prototype.capitalize = stringPrototypes.capitalize;
         String.prototype.capitalizeAll = stringPrototypes.capitalizeAll;
+        String.prototype.getDateEU = stringPrototypes.getDateEU;
+        String.prototype.getDateUS = stringPrototypes.getDateUS;
 
         return 'prototypes imported';
     }

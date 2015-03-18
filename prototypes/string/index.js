@@ -81,5 +81,62 @@ module.exports = {
             }
         }
         return result;
+    },
+    getDateEU : function(date){
+        var split = String(date).split(' '),
+            month = getMonth(split[1]),
+            day = split[2],
+            year = String(split[3]);
+        return day+'/'+month+'/'+year;
+    },
+    getDateUS : function(date){
+        var split = String(date).split(' ');
+        var month = getMonth(split[1]);
+        var day = split[2];
+        var year = split[3];
+        return month+'/'+day+'/'+year;
     }
 };
+
+function getMonth(value){
+    var month = '';
+    switch (value){
+        case 'Jan':
+            month ='1' ;
+            break;
+        case 'Feb':
+            month ='2' ;
+            break;
+        case 'Mar':
+            month ='3' ;
+            break;
+        case 'Apr':
+            month ='4' ;
+            break;
+        case 'May':
+            month ='5' ;
+            break;
+        case 'June':
+            month ='6' ;
+            break;
+        case 'July':
+            month ='7' ;
+            break;
+        case 'Aug':
+            month ='8' ;
+            break;
+        case 'Sept':
+            month ='9' ;
+            break;
+        case 'Oct':
+            month ='10' ;
+            break;
+        case 'Nov':
+            month ='11' ;
+            break;
+        case 'Dic':
+            month ='12' ;
+            break;
+    }
+    return month;
+}
