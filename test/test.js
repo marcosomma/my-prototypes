@@ -4,6 +4,7 @@
 var should = require('chai').should(),
     prototypes = require('../index'),
     init = prototypes.init,
+    dbDate = '2015-03-18T16:23:18.423Z',
     today = new Date(),
     dateEU = today.getUTCDate() + "/"
         + (today.getMonth()+1)  + "/"
@@ -166,12 +167,20 @@ describe('#String', function() {
         String('test test Test test').capitalizeAll().should.equal('Test Test Test Test');
     });
 
-    it('convert"'+today+'" in "'+dateEU+'"', function() {
+    it('convert "'+today+'" in "'+dateEU+'"', function() {
         String().getDateEU(new Date).should.equal(dateEU);
     });
 
-    it('convert"'+today+'" in "'+dateUS+'"', function() {
+    it('convert "'+today+'" in "'+dateUS+'"', function() {
         String().getDateUS(new Date).should.equal(dateUS);
+    });
+
+    it('convert DB format date "'+dbDate+'" in "18/03/2015"', function() {
+        String(dbDate).getDbDate().should.equal("18/03/2015");
+    });
+
+    it('convert DB format date "'+dbDate+'" in "18/03/2015 - 16:23:18"', function() {
+        String(dbDate).getDbDateTime().should.equal("18/03/2015 - 16:23:18");
     });
 });
 

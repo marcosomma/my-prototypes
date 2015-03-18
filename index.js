@@ -21,6 +21,8 @@ module.exports = {
         String.prototype.capitalizeAll = stringPrototypes.capitalizeAll;
         String.prototype.getDateEU = stringPrototypes.getDateEU;
         String.prototype.getDateUS = stringPrototypes.getDateUS;
+        String.prototype.getDbDate = stringPrototypes.getDbDate;
+        String.prototype.getDbDateTime = stringPrototypes.getDbDateTime;
 
         return 'prototypes imported';
     }

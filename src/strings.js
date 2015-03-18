@@ -84,11 +84,25 @@ module.exports = {
         return day+'/'+month+'/'+year;
     },
     getDateUS : function(date){
-        var split = String(date).split(' ');
-        var month = getMonth(split[1]);
-        var day = split[2];
-        var year = split[3];
+        var split = String(date).split(' '),
+            month = getMonth(split[1]),
+            day = split[2],
+            year = split[3];
         return month+'/'+day+'/'+year;
+    },
+    getDbDate : function(){
+        var split = String(this).split('T'),
+            splitDate = String(split[0]).split('-'),
+            year = splitDate[0],
+            month = splitDate[1],
+            day = splitDate[2];
+        return day+'/'+month+'/'+year;
+    },
+    getDbDateTime : function(){
+        var split = String(this).split('T'),
+            splitTime = String(split[1]).split('.'),
+            time = splitTime[0];
+        return this.getDbDate() + ' - ' + time;
     }
 };
 /* istanbul ignore next */

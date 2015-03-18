@@ -15,6 +15,8 @@ Add String and Numbers prototypes in your project.
 - capitalizeAll
 - getDateEU
 - getDateUS
+- getDbDate
+- getDbDateTime
 - htmlEscape
 - htmlUnescape
 - repeat
@@ -41,6 +43,16 @@ Add String and Numbers prototypes in your project.
 *Convert ```new Date``` in american format date*
 
 ```String().getDateUS(new Date)``` result ```mm/dd/yyyy```
+
+**getDbDate**
+*Convert Database formar date ```2015-03-18T16:23:18.423Z``` in european format date*
+
+```String('2015-03-18T16:23:18.423Z').getDbDate()``` result ```dd/mm/yyyy```
+
+**getDbDateTime**
+*Convert Database formar date ```2015-03-18T16:23:18.423Z``` in european format date and time*
+
+```String('2015-03-18T16:23:18.423Z').getDbDateTime()``` result ```dd/mm/yyyy - hh:mm:ss```
 
 **htmlEscape**
 *Convert normal string in a html string*
