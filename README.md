@@ -37,12 +37,12 @@ Add String and Numbers prototypes in your project.
 **getDateEU**
 *Convert ```new Date``` in european format date*
 
-```String().getDateEU(new Date)``` result ```dd/mm/yyyy```
+```String(new Date).getDateEU()``` result ```dd/mm/yyyy```
 
 **getDateUS**
 *Convert ```new Date``` in american format date*
 
-```String().getDateUS(new Date)``` result ```mm/dd/yyyy```
+```String(new Date).getDateUS()``` result ```mm/dd/yyyy```
 
 **getDbDate**
 *Convert Database formar date ```2015-03-18T16:23:18.423Z``` in european format date*

@@ -77,14 +77,14 @@ module.exports = {
         return result;
     },
     getDateEU : function(date){
-        var split = String(date).split(' '),
+        var split = String(this).split(' '),
             month = getMonth(split[1]),
             day = split[2],
             year = String(split[3]);
         return day+'/'+month+'/'+year;
     },
-    getDateUS : function(date){
-        var split = String(date).split(' '),
+    getDateUS : function(){
+        var split = String(this).split(' '),
             month = getMonth(split[1]),
             day = split[2],
             year = split[3];

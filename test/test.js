@@ -168,11 +168,11 @@ describe('#String', function() {
     });
 
     it('convert "'+today+'" in "'+dateEU+'"', function() {
-        String().getDateEU(new Date).should.equal(dateEU);
+        String(new Date).getDateEU().should.equal(dateEU);
     });
 
     it('convert "'+today+'" in "'+dateUS+'"', function() {
-        String().getDateUS(new Date).should.equal(dateUS);
+        String(new Date).getDateUS().should.equal(dateUS);
     });
 
     it('convert DB format date "'+dbDate+'" in "18/03/2015"', function() {
