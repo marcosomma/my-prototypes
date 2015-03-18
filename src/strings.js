@@ -76,7 +76,7 @@ module.exports = {
         }
         return result;
     },
-    getDateEU : function(date){
+    getDateEU : function(){
         var split = String(this).split(' '),
             month = getMonth(split[1]),
             day = split[2],
@@ -105,6 +105,7 @@ module.exports = {
         return this.getDbDate() + ' - ' + time;
     }
 };
+
 /* istanbul ignore next */
 function getMonth(value){
     var month = '';
