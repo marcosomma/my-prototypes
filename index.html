@@ -47,84 +47,34 @@
 <hr>
 
 <h2>
-<a id="string-prototypes" class="anchor" href="#string-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>String prototypes</h2>
+<a id="array-prototypes" class="anchor" href="#array-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array prototypes</h2>
 
 <ul>
-<li>capitalize</li>
-<li>capitalizeAll</li>
-<li>getDateEU</li>
-<li>getDateUS</li>
-<li>getDbDate</li>
-<li>getDbDateTime</li>
-<li>htmlEscape</li>
-<li>htmlUnescape</li>
-<li>repeat</li>
-<li>substringAfterTo</li>
-<li>substringBeforeTo</li>
-<li>validateContent (dateEU, dateUS, time, email, ip-address, alphanumeric and phone)</li>
+<li>even</li>
+<li>evenIndex</li>
+<li>odd</li>
+<li>oddIndex</li>
 </ul>
 
-<p><strong>capitalize</strong>
-<em>Capitalize first letter in a word</em></p>
+<p><strong>even</strong>
+<em>Take all even numbers in an array</em></p>
 
-<p><code>String('test').capitalize()</code> result <code>"Test"</code></p>
+<p><code>[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()</code> result <code>[2,4,6,8,8,6,4]</code></p>
 
-<p><strong>capitalizeAll</strong>
-<em>Capitalize all first letters of all word contained in a sentence separate by space</em></p>
+<p><strong>evenIndex</strong>
+<em>Take all even index in an array</em></p>
 
-<p><code>String('test test Test test').capitalizeAll()</code> result <code>"Test Test Test Test"</code></p>
+<p><code>["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex()</code> result <code>["a","b","c","d","e","f"]</code></p>
 
-<p><strong>getDateEU</strong>
-<em>Convert <code>new Date</code> in european format date</em></p>
+<p><strong>odd</strong>
+<em>Take all odd numbers in an array</em></p>
 
-<p><code>String(new Date).getDateEU()</code> result <code>dd/mm/yyyy</code></p>
+<p><code>[1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd()</code> result <code>[1,3,3,5,7,9,5]</code></p>
 
-<p><strong>getDateUS</strong>
-<em>Convert <code>new Date</code> in american format date</em></p>
+<p><strong>oddIndex</strong>
+<em>Take all odd index in an array</em></p>
 
-<p><code>String(new Date).getDateUS()</code> result <code>mm/dd/yyyy</code></p>
-
-<p><strong>getDbDate</strong>
-<em>Convert Database formar date <code>2015-03-18T16:23:18.423Z</code> in european format date</em></p>
-
-<p><code>String('2015-03-18T16:23:18.423Z').getDbDate()</code> result <code>dd/mm/yyyy</code></p>
-
-<p><strong>getDbDateTime</strong>
-<em>Convert Database formar date <code>2015-03-18T16:23:18.423Z</code> in european format date and time</em></p>
-
-<p><code>String('2015-03-18T16:23:18.423Z').getDbDateTime()</code> result <code>dd/mm/yyyy - hh:mm:ss</code></p>
-
-<p><strong>htmlEscape</strong>
-<em>Convert normal string in a html string</em></p>
-
-<p><code>String('Marco&amp;Co').htmlEscape()</code> result <code>Marco&amp;amp;Co</code></p>
-
-<p><strong>htmlUnescape</strong>
-<em>Convert html string in a normal string</em></p>
-
-<p><code>String('Marco&amp;amp;Co').htmlUnescape()</code> result <code>Marco&amp;Co</code></p>
-
-<p><strong>repeat</strong>
-<em>Repeat a word 'n' times</em></p>
-
-<p><code>String('test0').repeat(3)</code> result <code>"test0test0test0"</code></p>
-
-<p><strong>substringBeforeTo</strong>
-<em>Return substring before an symbol</em></p>
-
-<p><code>String('test0.test1').substringBeforeTo('.')</code> result <code>"test0"</code></p>
-
-<p><strong>substringAfterTo</strong>
-<em>Return substring after an symbol if the symbol is contained more times return an array</em></p>
-
-<p><code>String('test0.test1').substringAfterTo('.')</code> result <code>"test1"</code>
-<code>String('test0.test1.test2.test3').substringAfterTo('.')</code> result <code>["test1","test2","test3"]</code></p>
-
-<p><strong>validateContent</strong>
-<em>Validate content in a string</em></p>
-
-<p><code>String('mak.so1979@gmail.com').validateContent('email')</code> result <code>true</code>
-<code>String('mak.so1979gmailcom').validateContent('email')</code> result <code>false</code></p>
+<p><code>["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex()</code> result <code>["A","B","C","D","E","F"]</code></p>
 
 <hr>
 
@@ -140,7 +90,7 @@
 <p><strong>formatMoney</strong>(decimals)
 <em>Convert integer o float number in a money value</em></p>
 
-<p><code>Number(1000000.12).formatMoney(2)</code> result <code>"1,000,000.12"</code></p>
+<p><code>1000000.12.formatMoney(2)</code> result <code>"1,000,000.12"</code></p>
 
 <p><strong>getSecond</strong>(hours,minutes,seconds)
 <em>Return seconds</em></p>
@@ -151,6 +101,88 @@
 <em>Return milliseconds</em></p>
 
 <p><code>Number().getMilliSecond(1,1,1)</code> result <code>3661000</code></p>
+
+<hr>
+
+<h2>
+<a id="string-prototypes" class="anchor" href="#string-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>String prototypes</h2>
+
+<ul>
+<li>capitalize</li>
+<li>capitalizeAll</li>
+<li>getDateEU</li>
+<li>getDateUS</li>
+<li>getDbDate</li>
+<li>getDbDateTime</li>
+<li>htmlEscape (exclude ":", ";" and "#")</li>
+<li>htmlUnescape (exclude ":", ";" and "#")</li>
+<li>repeat</li>
+<li>substringAfterTo</li>
+<li>substringBeforeTo</li>
+<li>validateContent (dateEU, dateUS, time, email, ip-address, alphanumeric and phone)</li>
+</ul>
+
+<p><strong>capitalize</strong>
+<em>Capitalize first letter in a word</em></p>
+
+<p><code>'test'.capitalize()</code> result <code>"Test"</code></p>
+
+<p><strong>capitalizeAll</strong>
+<em>Capitalize all first letters of all word contained in a sentence separate by space</em></p>
+
+<p><code>'test test Test test'.capitalizeAll()</code> result <code>"Test Test Test Test"</code></p>
+
+<p><strong>getDateEU</strong>
+<em>Convert <code>new Date</code> in european format date</em></p>
+
+<p><code>String(new Date).getDateEU()</code> result <code>dd/mm/yyyy</code></p>
+
+<p><strong>getDateUS</strong>
+<em>Convert <code>new Date</code> in american format date</em></p>
+
+<p><code>String(new Date).getDateUS()</code> result <code>mm/dd/yyyy</code></p>
+
+<p><strong>getDbDate</strong>
+<em>Convert Database formar date <code>2015-03-18T16:23:18.423Z</code> in european format date</em></p>
+
+<p><code>'2015-03-18T16:23:18.423Z'.getDbDate()</code> result <code>dd/mm/yyyy</code></p>
+
+<p><strong>getDbDateTime</strong>
+<em>Convert Database formar date <code>2015-03-18T16:23:18.423Z</code> in european format date and time</em></p>
+
+<p><code>'2015-03-18T16:23:18.423Z'.getDbDateTime()</code> result <code>dd/mm/yyyy - hh:mm:ss</code></p>
+
+<p><strong>htmlEscape</strong>
+<em>Convert normal string in a html string</em></p>
+
+<p><code>'Marco&amp;Co'.htmlEscape()</code> result <code>Marco&amp;#38;Co</code></p>
+
+<p><strong>htmlUnescape</strong>
+<em>Convert html string in a normal string</em></p>
+
+<p><code>'Marco&amp;#38;Co'.htmlUnescape()</code> result <code>Marco&amp;Co</code></p>
+
+<p><strong>repeat</strong>
+<em>Repeat a word 'n' times</em></p>
+
+<p><code>'test0'.repeat(3)</code> result <code>"test0test0test0"</code></p>
+
+<p><strong>substringBeforeTo</strong>
+<em>Return substring before an symbol</em></p>
+
+<p><code>'test0.test1'.substringBeforeTo('.')</code> result <code>"test0"</code></p>
+
+<p><strong>substringAfterTo</strong>
+<em>Return substring after an symbol if the symbol is contained more times return an array</em></p>
+
+<p><code>'test0.test1'.substringAfterTo('.')</code> result <code>"test1"</code>
+<code>'test0.test1.test2.test3'.substringAfterTo('.')</code> result <code>["test1","test2","test3"]</code></p>
+
+<p><strong>validateContent</strong>
+<em>Validate content in a string</em></p>
+
+<p><code>'mak.so1979@gmail.com'.validateContent('email')</code> result <code>true</code>
+<code>'mak.so1979gmailcom'.validateContent('email')</code> result <code>false</code></p>
       </section>
     </div>
 
