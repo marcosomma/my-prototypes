@@ -11,7 +11,6 @@ module.exports = {
     },
     htmlUnescape:function() {
         //console.log('htmlUnescape');
-        var html = this;
         return replaceMe.uHtml(this);
     },
     validateContent:function(reg) {
