@@ -33,138 +33,138 @@ describe('#init', function() {
 
 describe('#String', function() {
     it('converts & into &amp;', function() {
-        String('&').htmlEscape().should.equal('&#38;');
+        '&'.htmlEscape().should.equal('&#38;');
     });
 
     it('converts " into &quot;', function() {
-        String('"').htmlEscape().should.equal('&#34;');
+        '"'.htmlEscape().should.equal('&#34;');
     });
 
     it("converts ' into &#39;", function() {
-        String("'").htmlEscape().should.equal('&#39;');
+        "'".htmlEscape().should.equal('&#39;');
     });
 
     it('converts < into &lt;', function() {
-        String('<').htmlEscape().should.equal('&#60;');
+        '<'.htmlEscape().should.equal('&#60;');
     });
 
     it('converts > into &gt;', function() {
-        String('>').htmlEscape().should.equal('&#62;');
+        '>'.htmlEscape().should.equal('&#62;');
     });
 
     it('converts &#38; into &', function() {
-        String('&#38;').htmlUnescape().should.equal('&');
+        '&#38;'.htmlUnescape().should.equal('&');
     });
 
     it('converts &#34; into "', function() {
-        String('&#34;').htmlUnescape().should.equal('"');
+        '&#34;'.htmlUnescape().should.equal('"');
     });
 
     it("converts &#39; into '", function() {
-        String('&#39;').htmlUnescape().should.equal("'");
+        '&#39;'.htmlUnescape().should.equal("'");
     });
 
     it('converts &#60; into <', function() {
-        String('&#60;').htmlUnescape().should.equal('<');
+        '&#60;'.htmlUnescape().should.equal('<');
     });
 
     it('converts &#62; into >', function() {
-        String('&#62;').htmlUnescape().should.equal('>');
+        '&#62;'.htmlUnescape().should.equal('>');
     });
 
-    it('validate mak.so1979@gmail.com as email', function() {
-        String('mak.so1979@gmail.com').validateContent('email').should.equal(true);
+    it('validate "mak.so1979@gmail.com" as email', function() {
+        'mak.so1979@gmail.com'.validateContent('email').should.equal(true);
     });
 
-    it('validate mak.so1979@gmailcom is NOT email', function() {
-        String('mak.so1979@gmailcom').validateContent('email').should.equal(false);
+    it('validate "mak.so1979@gmailcom" is NOT email', function() {
+        'mak.so1979@gmailcom'.validateContent('email').should.equal(false);
     });
 
-    it('validate 12aa12 as alphanumeric', function() {
-        String('12aa12').validateContent('alphanumeric').should.equal(true);
+    it('validate "12aa12" as alphanumeric', function() {
+        '12aa12'.validateContent('alphanumeric').should.equal(true);
     });
 
-    it('validate 12aasa2"12 is NOT alphanumeric', function() {
-        String('12aasa2"12').validateContent('alphanumeric').should.equal(false);
+    it('validate "12aasa2@12" is NOT alphanumeric', function() {
+        '12aasa2@12'.validateContent('alphanumeric').should.equal(false);
     });
 
-    it('validate '+dateEU+' as dateEU', function() {
-        String(dateEU).validateContent('dateEU').should.equal(true);
+    it('validate "'+dateEU+'" as dateEU', function() {
+        dateEU.validateContent('dateEU').should.equal(true);
     });
 
-    it('validate '+wrongDateEU+' is NOT dateEU', function() {
-        String(wrongDateEU).validateContent('dateEU').should.equal(false);
+    it('validate "'+wrongDateEU+'" is NOT dateEU', function() {
+        wrongDateEU.validateContent('dateEU').should.equal(false);
     });
 
-    it('validate '+dateUS+' as dateUS', function() {
-        String(dateUS).validateContent('dateUS').should.equal(true);
+    it('validate "'+dateUS+'" as dateUS', function() {
+        dateUS.validateContent('dateUS').should.equal(true);
     });
 
-    it('validate '+wrongDateUS+' is NOT dateUS', function() {
-        String(wrongDateUS).validateContent('dateUS').should.equal(false);
+    it('validate "'+wrongDateUS+'" is NOT dateUS', function() {
+        wrongDateUS.validateContent('dateUS').should.equal(false);
     });
 
-    it('validate '+time+' as time', function() {
-        String(time).validateContent('time').should.equal(true);
+    it('validate "'+time+'" as time', function() {
+        time.validateContent('time').should.equal(true);
     });
 
-    it('validate '+wrongTime+' is NOT time', function() {
-        String(wrongTime).validateContent('time').should.equal(false);
+    it('validate "'+wrongTime+'" is NOT time', function() {
+        wrongTime.validateContent('time').should.equal(false);
     });
 
-    it('validate 127.0.0.1 as ip-address', function() {
-        String('127.0.0.1').validateContent('ip-address').should.equal(true);
+    it('validate "127.0.0.1" as ip-address', function() {
+        '127.0.0.1'.validateContent('ip-address').should.equal(true);
     });
 
-    it('validate 999.99.256.1 is NOT ip-address', function() {
-        String('999.99.256.1').validateContent('ip-address').should.equal(false);
+    it('validate "999.99.256.1" is NOT ip-address', function() {
+        '999.99.256.1'.validateContent('ip-address').should.equal(false);
     });
 
-    it('validate +353 0866656 as phone', function() {
-        String('+353 0866656').validateContent('phone').should.equal(true);
+    it('validate "+353 0866656" as phone', function() {
+        '+353 0866656'.validateContent('phone').should.equal(true);
     });
 
-    it('validate +a353 0866656zz is NOT phone', function() {
-        String('+a353 0866656zz').validateContent('phone').should.equal(false);
+    it('validate "+a353 0866656zz" is NOT phone', function() {
+        '+a353 0866656zz'.validateContent('phone').should.equal(false);
     });
 
     it('split "." in "test0.test1" and give the first value', function() {
-        String('test0.test1').substringBeforeTo('.').should.equal('test0');
+        'test0.test1'.substringBeforeTo('.').should.equal('test0');
     });
 
     it('split "$" in "test0.test1" and give the first value', function() {
-        String('test0.test1').substringBeforeTo('$').should.equal('test0.test1');
+        'test0.test1'.substringBeforeTo('$').should.equal('test0.test1');
     });
 
     it('split "." in "test0.test1" and give the second value', function() {
-        String('test0.test1').substringAfterTo('.').should.equal('test1');
+        'test0.test1'.substringAfterTo('.').should.equal('test1');
     });
 
     it('split "$" in "test0.test1" and give the second value', function() {
-        String('test0.test1').substringAfterTo('$').should.equal('test0.test1');
+        'test0.test1'.substringAfterTo('$').should.equal('test0.test1');
     });
 
     it('split "." in "test0.test1.test2.test3" and give the all values after the first', function() {
-        String('test0.test1.test2.test3').substringAfterTo('.').should.have.length(3);
-        String('test0.test1.test2.test3').substringAfterTo('.')[0].should.equal('test1');
-        String('test0.test1.test2.test3').substringAfterTo('.')[1].should.equal('test2');
-        String('test0.test1.test2.test3').substringAfterTo('.')[2].should.equal('test3');
+        'test0.test1.test2.test3'.substringAfterTo('.').should.have.length(3);
+        'test0.test1.test2.test3'.substringAfterTo('.')[0].should.equal('test1');
+        'test0.test1.test2.test3'.substringAfterTo('.')[1].should.equal('test2');
+        'test0.test1.test2.test3'.substringAfterTo('.')[2].should.equal('test3');
     });
 
     it('repeat "test0" for 3 times', function() {
-        String('test0').repeat(3).should.equal('test0test0test0');
+        'test0'.repeat(3).should.equal('test0test0test0');
     });
 
     it('repeat "test0" for 0 times', function() {
-        String('test0').repeat(0).should.equal('');
+        'test0'.repeat(0).should.equal('');
     });
 
     it('capitalize "test" return "Test"', function() {
-        String('test').capitalize().should.equal('Test');
+        'test'.capitalize().should.equal('Test');
     });
 
     it('capitalizeAll "test test Test test" return "Test Test Test Test"', function() {
-        String('test test Test test').capitalizeAll().should.equal('Test Test Test Test');
+        'test test Test test'.capitalizeAll().should.equal('Test Test Test Test');
     });
 
     it('convert "'+today+'" in "'+dateEU+'"', function() {
@@ -176,17 +176,17 @@ describe('#String', function() {
     });
 
     it('convert DB format date "'+dbDate+'" in "18/03/2015"', function() {
-        String(dbDate).getDbDate().should.equal("18/03/2015");
+        dbDate.getDbDate().should.equal("18/03/2015");
     });
 
     it('convert DB format date "'+dbDate+'" in "18/03/2015 - 16:23:18"', function() {
-        String(dbDate).getDbDateTime().should.equal("18/03/2015 - 16:23:18");
+        dbDate.getDbDateTime().should.equal("18/03/2015 - 16:23:18");
     });
 });
 
 describe('#Number', function() {
     it('converts 1000000.12 into 1,000,000.12', function() {
-        Number(1000000.12).formatMoney(2).should.equal('1,000,000.12');
+        1000000.12.formatMoney(2).should.equal('1,000,000.12');
     });
 
     it('get seconds in 1 hours 1 minut and 1 second = 3661', function() {
@@ -195,6 +195,47 @@ describe('#Number', function() {
 
     it('get milliseconds in 1 hours 1 minut and 1 second = 3661000', function() {
         Number().getMilliSecond(1,1,1).should.equal(3661000);
+    });
+});
+
+describe('#Array', function() {
+    it('Take all even numbers in this array [1,2,3,3,4,5,6,7,8,8,9,6,5,4] result [2,4,6,8,8,6,4]', function() {
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even().should.have.length(7);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()[0].should.equal(2);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()[1].should.equal(4);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()[2].should.equal(6);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()[3].should.equal(8);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()[4].should.equal(8);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()[5].should.equal(6);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()[6].should.equal(4);
+    });
+    it('Take all odd numbers in this array [1,2,3,3,4,5,6,7,8,8,9,6,5,4] result [1,3,3,5,7,9,5]', function() {
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd().should.have.length(7);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd()[0].should.equal(1);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd()[1].should.equal(3);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd()[2].should.equal(3);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd()[3].should.equal(5);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd()[4].should.equal(7);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd()[5].should.equal(9);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd()[6].should.equal(5);
+    });
+    it('Take all even position in this array ["a","A","b","B","c","C","d","D","e","E","f","F"] result ["a","b","c","d","e","f"]', function() {
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex().should.have.length(6);
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex()[0].should.equal("a");
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex()[1].should.equal("b");
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex()[2].should.equal("c");
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex()[3].should.equal("d");
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex()[4].should.equal("e");
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex()[5].should.equal("f");
+    });
+    it('Take all odd position in this array ["a","A","b","B","c","C","d","D","e","E","f","F"] result ["A","B","C","D","E","F"]', function() {
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex().should.have.length(6);
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex()[0].should.equal("A");
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex()[1].should.equal("B");
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex()[2].should.equal("C");
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex()[3].should.equal("D");
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex()[4].should.equal("E");
+        ["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex()[5].should.equal("F");
     });
 });
 

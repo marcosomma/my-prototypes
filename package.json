@@ -1,6 +1,6 @@
 {
   "name": "my-prototypes",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Add String and Numbers prototypes in your project.",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   },
   "keywords": [
     "prototype",
+    "array",
     "string",
     "number",
     "capitalize",
@@ -29,6 +30,8 @@
     "us date",
     "eu date",
     "database",
+    "even",
+    "odd",
     "milliseconds"
   ],
   "author": "Marco Somma <mak.so1979@gmail.com> (http://marcosomma.altervista.org/)",

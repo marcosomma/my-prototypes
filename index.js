@@ -3,9 +3,14 @@
  */
 var stringPrototypes = require('./src/strings.js');
 var numberPrototypes = require('./src/numbers.js');
+var arrayPrototypes = require('./src/array.js');
 module.exports = {
 
     init : function(){
+        Array.prototype.even = arrayPrototypes.even;
+        Array.prototype.odd = arrayPrototypes.odd;
+        Array.prototype.evenIndex = arrayPrototypes.evenIndex;
+        Array.prototype.oddIndex = arrayPrototypes.oddIndex;
 
         Number.prototype.formatMoney = numberPrototypes.formatMoney;
         Number.prototype.getSecond = numberPrototypes.getSecond;

@@ -10,6 +10,56 @@ Add String and Numbers prototypes in your project.
 
 ***
 
+## Array prototypes
+- even
+- evenIndex
+- odd
+- oddIndex
+
+**even**
+*Take all even numbers in an array*
+
+```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()``` result ```[2,4,6,8,8,6,4]```
+
+**evenIndex**
+*Take all even index in an array*
+
+```["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex()``` result ```["a","b","c","d","e","f"]```
+
+**odd**
+*Take all odd numbers in an array*
+
+```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd()``` result ```[1,3,3,5,7,9,5]```
+
+**oddIndex**
+*Take all odd index in an array*
+
+```["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex()``` result ```["A","B","C","D","E","F"]```
+
+***
+
+## Number prototypes
+- formatMoney
+- getSecond
+- getMilliSecond
+
+**formatMoney**(decimals)
+*Convert integer o float number in a money value*
+
+```1000000.12.formatMoney(2)``` result ```"1,000,000.12"```
+
+**getSecond**(hours,minutes,seconds)
+*Return seconds*
+
+```Number().getSecond(1,1,1)``` result ```3661```
+
+**getMilliSecond**(hours,minutes,seconds)
+*Return milliseconds*
+
+```Number().getMilliSecond(1,1,1)``` result ```3661000```
+
+***
+
 ## String prototypes
 - capitalize
 - capitalizeAll
@@ -27,12 +77,12 @@ Add String and Numbers prototypes in your project.
 **capitalize**
 *Capitalize first letter in a word*
 
-```String('test').capitalize()``` result ```"Test"```
+```'test'.capitalize()``` result ```"Test"```
 
 **capitalizeAll**
 *Capitalize all first letters of all word contained in a sentence separate by space*
 
-```String('test test Test test').capitalizeAll()``` result ```"Test Test Test Test"```
+```'test test Test test'.capitalizeAll()``` result ```"Test Test Test Test"```
 
 **getDateEU**
 *Convert ```new Date``` in european format date*
@@ -47,63 +97,41 @@ Add String and Numbers prototypes in your project.
 **getDbDate**
 *Convert Database formar date ```2015-03-18T16:23:18.423Z``` in european format date*
 
-```String('2015-03-18T16:23:18.423Z').getDbDate()``` result ```dd/mm/yyyy```
+```'2015-03-18T16:23:18.423Z'.getDbDate()``` result ```dd/mm/yyyy```
 
 **getDbDateTime**
 *Convert Database formar date ```2015-03-18T16:23:18.423Z``` in european format date and time*
 
-```String('2015-03-18T16:23:18.423Z').getDbDateTime()``` result ```dd/mm/yyyy - hh:mm:ss```
+```'2015-03-18T16:23:18.423Z'.getDbDateTime()``` result ```dd/mm/yyyy - hh:mm:ss```
 
 **htmlEscape**
 *Convert normal string in a html string*
 
-```String('Marco&Co').htmlEscape()``` result ```Marco&amp;Co```
+```'Marco&Co'.htmlEscape()``` result ```Marco&amp;Co```
 
 **htmlUnescape**
 *Convert html string in a normal string*
 
-```String('Marco&amp;Co').htmlUnescape()``` result ```Marco&Co```
+```'Marco&amp;Co'.htmlUnescape()``` result ```Marco&Co```
 
 **repeat**
 *Repeat a word 'n' times*
 
-```String('test0').repeat(3)``` result ```"test0test0test0"```
+```'test0'.repeat(3)``` result ```"test0test0test0"```
 
 **substringBeforeTo**
 *Return substring before an symbol*
 
-```String('test0.test1').substringBeforeTo('.')``` result ```"test0"```
+```'test0.test1'.substringBeforeTo('.')``` result ```"test0"```
 
 **substringAfterTo**
 *Return substring after an symbol if the symbol is contained more times return an array*
 
-```String('test0.test1').substringAfterTo('.')``` result ```"test1"```
-```String('test0.test1.test2.test3').substringAfterTo('.')``` result ```["test1","test2","test3"]```
+```'test0.test1'.substringAfterTo('.')``` result ```"test1"```
+```'test0.test1.test2.test3'.substringAfterTo('.')``` result ```["test1","test2","test3"]```
 
 **validateContent**
 *Validate content in a string*
 
-```String('mak.so1979@gmail.com').validateContent('email')``` result ```true```
-```String('mak.so1979gmailcom').validateContent('email')``` result ```false```
-
-***
-
-## Number prototypes
-- formatMoney
-- getSecond
-- getMilliSecond
-
-**formatMoney**(decimals)
-*Convert integer o float number in a money value*
-
-```Number(1000000.12).formatMoney(2)``` result ```"1,000,000.12"```
-
-**getSecond**(hours,minutes,seconds)
-*Return seconds*
-
-```Number().getSecond(1,1,1)``` result ```3661```
-
-**getMilliSecond**(hours,minutes,seconds)
-*Return milliseconds*
-
-```Number().getMilliSecond(1,1,1)``` result ```3661000```
+```'mak.so1979@gmail.com'.validateContent('email')``` result ```true```
+```'mak.so1979gmailcom'.validateContent('email')``` result ```false```
