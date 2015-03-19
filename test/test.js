@@ -33,11 +33,11 @@ describe('#init', function() {
 
 describe('#String', function() {
     it('converts & into &amp;', function() {
-        String('&').htmlEscape().should.equal('&amp;');
+        String('&').htmlEscape().should.equal('&#38;');
     });
 
     it('converts " into &quot;', function() {
-        String('"').htmlEscape().should.equal('&quot;');
+        String('"').htmlEscape().should.equal('&#34;');
     });
 
     it("converts ' into &#39;", function() {
@@ -45,31 +45,31 @@ describe('#String', function() {
     });
 
     it('converts < into &lt;', function() {
-        String('<').htmlEscape().should.equal('&lt;');
+        String('<').htmlEscape().should.equal('&#60;');
     });
 
     it('converts > into &gt;', function() {
-        String('>').htmlEscape().should.equal('&gt;');
+        String('>').htmlEscape().should.equal('&#62;');
     });
 
-    it('converts &amp; into &', function() {
-        String('&amp;').htmlUnescape().should.equal('&');
+    it('converts &#38; into &', function() {
+        String('&#38;').htmlUnescape().should.equal('&');
     });
 
-    it('converts &quot; into "', function() {
-        String('&quot;').htmlUnescape().should.equal('"');
+    it('converts &#34; into "', function() {
+        String('&#34;').htmlUnescape().should.equal('"');
     });
 
     it("converts &#39; into '", function() {
         String('&#39;').htmlUnescape().should.equal("'");
     });
 
-    it('converts &lt; into <', function() {
-        String('&lt;').htmlUnescape().should.equal('<');
+    it('converts &#60; into <', function() {
+        String('&#60;').htmlUnescape().should.equal('<');
     });
 
-    it('converts &gt; into >', function() {
-        String('&gt;').htmlUnescape().should.equal('>');
+    it('converts &#62; into >', function() {
+        String('&#62;').htmlUnescape().should.equal('>');
     });
 
     it('validate mak.so1979@gmail.com as email', function() {

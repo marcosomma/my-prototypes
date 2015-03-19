@@ -17,8 +17,8 @@ Add String and Numbers prototypes in your project.
 - getDateUS
 - getDbDate
 - getDbDateTime
-- htmlEscape
-- htmlUnescape
+- htmlEscape (exclude ":", ";" and "#")
+- htmlUnescape (exclude ":", ";" and "#")
 - repeat
 - substringAfterTo
 - substringBeforeTo
