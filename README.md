@@ -107,12 +107,12 @@ Add String and Numbers prototypes in your project.
 **htmlEscape**
 *Convert normal string in a html string*
 
-```'Marco&Co'.htmlEscape()``` result ```Marco&amp;Co```
+```'Marco&Co'.htmlEscape()``` result ```Marco&#38;Co```
 
 **htmlUnescape**
 *Convert html string in a normal string*
 
-```'Marco&amp;Co'.htmlUnescape()``` result ```Marco&Co```
+```'Marco&#38;Co'.htmlUnescape()``` result ```Marco&Co```
 
 **repeat**
 *Repeat a word 'n' times*
