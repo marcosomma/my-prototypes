@@ -21,6 +21,7 @@ module.exports = {
         return re.test(string);
     },
     substringBeforeTo : function(str){
+        //console.log('substringBeforeTo');
         if (this.indexOf(str) === -1){
             return this;
         }
@@ -28,6 +29,7 @@ module.exports = {
         return response[0];
     },
     substringAfterTo : function(str){
+        //console.log('substringAfterTo');
         if (this.indexOf(str) === -1){
             return this;
         }
@@ -40,6 +42,7 @@ module.exports = {
         }
     },
     repeat : function(count){
+        //console.log('repeat');
         if (count < 1)
         {
             return '';
@@ -50,11 +53,12 @@ module.exports = {
         }
         return result;
     },
-    capitalize : function()
-    {
+    capitalize : function(){
+        //console.log('capitalize');
         return this.charAt(0).toUpperCase() + this.slice(1);
     },
     capitalizeAll : function(){
+        //console.log('capitalizeAll');
         var arraySplit = this.split(' '),
             result = '';
         for(var i=0; i<arraySplit.length; i++){
@@ -67,6 +71,7 @@ module.exports = {
         return result;
     },
     getDateEU : function(){
+        //console.log('getDateEU');
         var split = String(this).split(' '),
             month = getMonth(split[1]),
             day = split[2],
@@ -74,6 +79,7 @@ module.exports = {
         return day+'/'+month+'/'+year;
     },
     getDateUS : function(){
+        //console.log('getDateUS');
         var split = String(this).split(' '),
             month = getMonth(split[1]),
             day = split[2],
@@ -81,6 +87,7 @@ module.exports = {
         return month+'/'+day+'/'+year;
     },
     getDbDate : function(){
+        //console.log('getDbDate');
         var split = String(this).split('T'),
             splitDate = String(split[0]).split('-'),
             year = splitDate[0],
@@ -89,6 +96,7 @@ module.exports = {
         return day+'/'+month+'/'+year;
     },
     getDbDateTime : function(){
+        //console.log('getDbDateTime');
         var split = String(this).split('T'),
             splitTime = String(split[1]).split('.'),
             time = splitTime[0];
