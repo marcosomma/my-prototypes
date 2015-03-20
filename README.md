@@ -141,7 +141,7 @@ Add Array, Numbers, Object and String prototypes in your project.
 **reverseWord**
 *Reverse a word*
 
-```'test0'.Reverse(3)``` result ```"0tset"```
+```'test0'.reverseWord()``` result ```"0tset"```
 
 **substringBeforeTo**
 *Return substring before an symbol*
