@@ -32,11 +32,19 @@ describe('#init', function() {
 });
 
 describe('#String', function() {
-    it('converts & into &amp;', function() {
+    it('converts & into &#38;', function() {
         '&'.htmlEscape().should.equal('&#38;');
     });
 
-    it('converts " into &quot;', function() {
+    it('converts "Marco&Co" into Marco&#38;Co', function() {
+        'Marco&Co'.htmlEscape().should.equal('Marco&#38;Co');
+    });
+
+    it('converts "Marco&C\'o" into "Marco&#38;C&#39;o"', function() {
+        "Marco&C'o".htmlEscape().should.equal('Marco&#38;C&#39;o');
+    });
+
+    it('converts " into &#34;', function() {
         '"'.htmlEscape().should.equal('&#34;');
     });
 
@@ -44,11 +52,11 @@ describe('#String', function() {
         "'".htmlEscape().should.equal('&#39;');
     });
 
-    it('converts < into &lt;', function() {
+    it('converts < into &#60;', function() {
         '<'.htmlEscape().should.equal('&#60;');
     });
 
-    it('converts > into &gt;', function() {
+    it('converts > into &#62;', function() {
         '>'.htmlEscape().should.equal('&#62;');
     });
 
