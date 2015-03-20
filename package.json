@@ -1,7 +1,7 @@
 {
   "name": "my-prototypes",
-  "version": "0.3.7",
-  "description": "Add String and Numbers prototypes in your project.",
+  "version": "0.3.8",
+  "description": "Add Array, Numbers, Object and String prototypes in your project.",
   "main": "index.js",
   "scripts": {
     "test": "grunt coverage"
@@ -15,6 +15,8 @@
     "array",
     "string",
     "number",
+    "object",
+    "json",
     "capitalize",
     "repeat",
     "reverse",
@@ -33,6 +35,10 @@
     "database",
     "even",
     "odd",
+    "json length",
+    "json split",
+    "length json",
+    "split json",
     "milliseconds"
   ],
   "author": "Marco Somma <mak.so1979@gmail.com> (http://marcosomma.altervista.org/)",

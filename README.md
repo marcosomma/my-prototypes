@@ -1,6 +1,6 @@
 [![Code Climate](https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![Test Coverage](https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg)](https://codeclimate.com/github/marcosomma/my-prototypes)
 # my-prototypes
-Add Array, Numbers and String prototypes in your project.
+Add Array, Numbers, Object and String prototypes in your project.
 
 **Install**
 ```npm install my-prototypes```
@@ -57,6 +57,22 @@ Add Array, Numbers and String prototypes in your project.
 *Return milliseconds*
 
 ```Number().getMilliSecond(1,1,1)``` result ```3661000```
+
+***
+
+## Object prototypes
+- lengthJSON
+- splitJSON
+
+**lengthJSON**
+*Count element in a plane json*
+
+```Object.lengthJSON({"key1":"value1","key2":"value2","key3":"value3","key4":"value4","key5":"value5"})``` result ```5```
+
+**splitJSON**
+*Split element of a plane json in an array of single elements*
+
+```Object.splitJSON({"key1":"value1","key2":"value2","key3":"value3"})``` result ```[{key1:'value1'},{key2:'value2'},{key3:'value3'}]```
 
 ***
 

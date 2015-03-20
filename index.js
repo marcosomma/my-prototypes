@@ -4,6 +4,7 @@
 var stringPrototypes = require('./src/strings.js');
 var numberPrototypes = require('./src/numbers.js');
 var arrayPrototypes = require('./src/array.js');
+var objectPrototypes = require('./src/object.js');
 module.exports = {
 
     init : function(){
@@ -11,7 +12,9 @@ module.exports = {
         Array.prototype.odd = arrayPrototypes.odd;
         Array.prototype.evenIndex = arrayPrototypes.evenIndex;
         Array.prototype.oddIndex = arrayPrototypes.oddIndex;
-        //Array.prototype.reverse = arrayPrototypes.reverse;
+
+        Object.prototype.lengthJSON = objectPrototypes.lengthJSON;
+        Object.prototype.splitJSON = objectPrototypes.splitJSON;
 
         Number.prototype.formatMoney = numberPrototypes.formatMoney;
         Number.prototype.getSecond = numberPrototypes.getSecond;

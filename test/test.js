@@ -202,6 +202,18 @@ describe('#Number', function() {
     });
 });
 
+describe('#Object', function() {
+    it('Count element in a plane json {"key1":"value1","key2":"value2","key3":"value3","key4":"value4","key5":"value5"} result 5', function() {
+        Object.lengthJSON({"key1":"value1","key2":"value2","key3":"value3","key4":"value4","key5":"value5"}).should.equal(5);
+    });
+    it('Split element of a plane json in an array of single elements {"key1":"value1","key2":"value2","key3":"value3"} result [{key1:"value1"},{key2:"value2"},{key3:"value3"}]', function() {
+        Object.splitJSON({"key1":"value1","key2":"value2","key3":"value3"}).should.have.length(3);
+        Object.splitJSON({"key1":"value1","key2":"value2","key3":"value3"})[0].key1.should.equal("value1");
+        Object.splitJSON({"key1":"value1","key2":"value2","key3":"value3"})[1].key2.should.equal("value2");
+        Object.splitJSON({"key1":"value1","key2":"value2","key3":"value3"})[2].key3.should.equal("value3");
+    });
+});
+
 describe('#Array', function() {
     it('Take all even numbers in this array [1,2,3,3,4,5,6,7,8,8,9,6,5,4] result [2,4,6,8,8,6,4]', function() {
         [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even().should.have.length(7);
