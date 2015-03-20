@@ -70,6 +70,7 @@ Add Array, Numbers and String prototypes in your project.
 - htmlEscape (exclude ":", ";" and "#")
 - htmlUnescape (exclude ":", ";" and "#")
 - repeat
+- reverseWord
 - substringAfterTo
 - substringBeforeTo
 - validateContent (dateEU, dateUS, time, email, ip-address, alphanumeric and phone)
