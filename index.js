@@ -13,12 +13,12 @@ module.exports = {
         Array.prototype.evenIndex = arrayPrototypes.evenIndex;
         Array.prototype.oddIndex = arrayPrototypes.oddIndex;
 
-        Object.prototype.lengthJSON = objectPrototypes.lengthJSON;
-        Object.prototype.splitJSON = objectPrototypes.splitJSON;
-
         Number.prototype.formatMoney = numberPrototypes.formatMoney;
         Number.prototype.getSecond = numberPrototypes.getSecond;
         Number.prototype.getMilliSecond = numberPrototypes.getMilliSecond;
+
+        Object.prototype.lengthJSON = objectPrototypes.lengthJSON;
+        Object.prototype.splitJSON = objectPrototypes.splitJSON;
 
         String.prototype.htmlEscape = stringPrototypes.htmlEscape;
         String.prototype.htmlUnescape = stringPrototypes.htmlUnescape;
