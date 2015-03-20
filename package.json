@@ -17,6 +17,7 @@
     "number",
     "capitalize",
     "repeat",
+    "reverse",
     "substring",
     "escape",
     "unescape",
