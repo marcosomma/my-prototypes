@@ -31,12 +31,14 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p><a href="https://codeclimate.com/github/marcosomma/my-prototypes"><img src="https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg" alt="Code Climate"></a> <a href="https://codeclimate.com/github/marcosomma/my-prototypes"><img src="https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg" alt="Test Coverage"></a></p>
+        <p><a href="https://nodei.co/npm/my-prototypes/"><img src="https://nodei.co/npm/my-prototypes.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="NPM"></a></p>
+
+<p><a href="http://badge.fury.io/js/my-prototypes"><img src="https://badge.fury.io/js/my-prototypes.svg" alt="npm version"></a> <a href="https://codeclimate.com/github/marcosomma/my-prototypes"><img src="https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg" alt="Code Climate"></a> <a href="https://codeclimate.com/github/marcosomma/my-prototypes"><img src="https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg" alt="Test Coverage"></a> <a href="https://travis-ci.org/marcosomma/my-prototypes"><img src="https://travis-ci.org/marcosomma/my-prototypes.svg?branch=master" alt="Build Status"></a></p>
 
 <h1>
 <a id="my-prototypes" class="anchor" href="#my-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>my-prototypes</h1>
 
-<p>Add Array, Numbers and String prototypes in your project.</p>
+<p>Add Array, Numbers, Object and String prototypes in your project.</p>
 
 <p><strong>Install</strong>
 <code>npm install my-prototypes</code></p>
@@ -101,6 +103,26 @@
 <em>Return milliseconds</em></p>
 
 <p><code>Number().getMilliSecond(1,1,1)</code> result <code>3661000</code></p>
+
+<hr>
+
+<h2>
+<a id="object-prototypes" class="anchor" href="#object-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Object prototypes</h2>
+
+<ul>
+<li>lengthJSON</li>
+<li>splitJSON</li>
+</ul>
+
+<p><strong>lengthJSON</strong>
+<em>Count element in a plane json</em></p>
+
+<p><code>Object.lengthJSON({"key1":"value1","key2":"value2","key3":"value3","key4":"value4","key5":"value5"})</code> result <code>5</code></p>
+
+<p><strong>splitJSON</strong>
+<em>Split element of a plane json in an array of single elements</em></p>
+
+<p><code>Object.splitJSON({"key1":"value1","key2":"value2","key3":"value3"})</code> result <code>[{key1:'value1'},{key2:'value2'},{key3:'value3'}]</code></p>
 
 <hr>
 
