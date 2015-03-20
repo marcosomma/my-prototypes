@@ -1,4 +1,6 @@
-[![NPM](https://nodei.co/npm/my-prototypes.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/my-prototypes/)[![Code Climate](https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![Test Coverage](https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg)](https://codeclimate.com/github/marcosomma/my-prototypes)[![Build Status](https://travis-ci.org/marcosomma/my-prototypes.svg?branch=master)](https://travis-ci.org/marcosomma/my-prototypes)
+[![NPM](https://nodei.co/npm/my-prototypes.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/my-prototypes/)
+
+[![npm version](https://badge.fury.io/js/my-prototypes.svg)](http://badge.fury.io/js/my-prototypes) [![Code Climate](https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![Test Coverage](https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![Build Status](https://travis-ci.org/marcosomma/my-prototypes.svg?branch=master)](https://travis-ci.org/marcosomma/my-prototypes)
 # my-prototypes
 Add Array, Numbers, Object and String prototypes in your project.
 
