@@ -100,6 +100,10 @@ module.exports = {
             splitTime = String(split[1]).split('.'),
             time = splitTime[0];
         return this.getDbDate() + ' - ' + time;
+    },
+    reverseWord : function(){
+        //console.log('getDbDateTime');
+        return String(this).split("").reverse().join("");
     }
 };
 

@@ -11,6 +11,7 @@ module.exports = {
         Array.prototype.odd = arrayPrototypes.odd;
         Array.prototype.evenIndex = arrayPrototypes.evenIndex;
         Array.prototype.oddIndex = arrayPrototypes.oddIndex;
+        //Array.prototype.reverse = arrayPrototypes.reverse;
 
         Number.prototype.formatMoney = numberPrototypes.formatMoney;
         Number.prototype.getSecond = numberPrototypes.getSecond;
@@ -22,6 +23,7 @@ module.exports = {
         String.prototype.substringBeforeTo = stringPrototypes.substringBeforeTo;
         String.prototype.substringAfterTo = stringPrototypes.substringAfterTo;
         String.prototype.repeat = stringPrototypes.repeat;
+        String.prototype.reverseWord = stringPrototypes.reverseWord;
         String.prototype.capitalize = stringPrototypes.capitalize;
         String.prototype.capitalizeAll = stringPrototypes.capitalizeAll;
         String.prototype.getDateEU = stringPrototypes.getDateEU;

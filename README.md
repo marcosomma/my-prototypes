@@ -1,6 +1,6 @@
 [![Code Climate](https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![Test Coverage](https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg)](https://codeclimate.com/github/marcosomma/my-prototypes)
 # my-prototypes
-Add String and Numbers prototypes in your project.
+Add Array, Numbers and String prototypes in your project.
 
 **Install**
 ```npm install my-prototypes```
@@ -118,6 +118,11 @@ Add String and Numbers prototypes in your project.
 *Repeat a word 'n' times*
 
 ```'test0'.repeat(3)``` result ```"test0test0test0"```
+
+**reverseWord**
+*Reverse a word*
+
+```'test0'.Reverse(3)``` result ```"0tset"```
 
 **substringBeforeTo**
 *Return substring before an symbol*

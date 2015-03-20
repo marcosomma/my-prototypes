@@ -159,6 +159,10 @@ describe('#String', function() {
         'test0'.repeat(0).should.equal('');
     });
 
+    it('reverse "test0" result "0tset"', function() {
+        'test0'.reverseWord().should.equal('0tset');
+    });
+
     it('capitalize "test" return "Test"', function() {
         'test'.capitalize().should.equal('Test');
     });
@@ -237,5 +241,6 @@ describe('#Array', function() {
         ["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex()[4].should.equal("E");
         ["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex()[5].should.equal("F");
     });
+
 });
 

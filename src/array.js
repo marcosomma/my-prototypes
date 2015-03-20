@@ -5,23 +5,23 @@
 module.exports = {
     even: function(){
         //console.log('even');
-        return iteration(false,true,this);
+        return iterationOddEven(false,true,this);
     },
     odd: function(){
         //console.log('odd');
-        return iteration(false,false,this);
+        return iterationOddEven(false,false,this);
     },
     evenIndex: function(){
         //console.log('evenIndex');
-        return iteration(true,true,this);
+        return iterationOddEven(true,true,this);
     },
     oddIndex: function(){
         //console.log('oddIndex');
-        return iteration(true,false,this);
+        return iterationOddEven(true,false,this);
     }
 };
 
-function iteration(index,odd,array){
+function iterationOddEven(index,odd,array){
     var result = [],
         value,
         check ;
