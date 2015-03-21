@@ -42,15 +42,19 @@ Add Array, Numbers, Object and String prototypes in your project.
 *generate an array of specific element*
 
 example 1
+
 ```var myarray = [].generateScale('letters','upper','a','c',null)``` result ```["A","B","C"]```
 
 example 2
+
 ```var myarray = [].generateScale('letters','lower','a','f',2)``` result ```["a","c","e"]```
 
 example 3
+
 ```var myarray = [].generateScale('numbers',null,0,9,3)``` result ```[0,3,6,9]```
 
 example 4
+
 ```var myarray = [].generateScale('numbers',null,-9,0,1)``` result ```[-9,-8,-7,-6,-5,-4,-3,-2,-1,0]```
 
 **evenIndex**

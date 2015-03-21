@@ -1,6 +1,6 @@
 {
   "name": "my-prototypes",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "Add Array, Numbers, Object and String prototypes in your project.",
   "main": "index.js",
   "scripts": {
