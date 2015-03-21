@@ -89,39 +89,39 @@ describe('#Array', function() {
         ["a","A","b","B","c","C","d","D","e","E","f","F"].containElement("A").should.equal(true);
     });
     it('generate an array of letters from "A" to "C" interval 1 result ["A","B","C"]', function() {
-        [].generateScale("letters",'upper','A','C',null).should.have.length(3);
-        [].generateScale("letters",'upper','A','C',null)[0].should.equal('A');
-        [].generateScale("letters",'upper','A','C',null)[1].should.equal('B');
-        [].generateScale("letters",'upper','A','C',null)[2].should.equal('C');
+        Array().generateScale("letters",'upper','A','C',null).should.have.length(3);
+        Array().generateScale("letters",'upper','A','C',null)[0].should.equal('A');
+        Array().generateScale("letters",'upper','A','C',null)[1].should.equal('B');
+        Array().generateScale("letters",'upper','A','C',null)[2].should.equal('C');
     });
     it('generate an array of letters from "a" to "f" interval 2 result ["a","c","e"]', function() {
-        [].generateScale("letters",'lower','a','f',2).should.have.length(3);
-        [].generateScale("letters",'lower','a','f',2)[0].should.equal('a');
-        [].generateScale("letters",'lower','a','f',2)[1].should.equal('c');
-        [].generateScale("letters",'lower','a','f',2)[2].should.equal('e');
+        Array().generateScale("letters",'lower','a','f',2).should.have.length(3);
+        Array().generateScale("letters",'lower','a','f',2)[0].should.equal('a');
+        Array().generateScale("letters",'lower','a','f',2)[1].should.equal('c');
+        Array().generateScale("letters",'lower','a','f',2)[2].should.equal('e');
     });
     it('generate an array of numbers from 0 to 9 interval 3 result [0,3,6,9]', function() {
-        [].generateScale("numbers",null,0,9,3).should.have.length(4);
-        [].generateScale("numbers",null,0,9,3)[0].should.equal(0);
-        [].generateScale("numbers",null,0,9,3)[1].should.equal(3);
-        [].generateScale("numbers",null,0,9,3)[2].should.equal(6);
-        [].generateScale("numbers",null,0,9,3)[3].should.equal(9);
+        Array().generateScale("numbers",null,0,9,3).should.have.length(4);
+        Array().generateScale("numbers",null,0,9,3)[0].should.equal(0);
+        Array().generateScale("numbers",null,0,9,3)[1].should.equal(3);
+        Array().generateScale("numbers",null,0,9,3)[2].should.equal(6);
+        Array().generateScale("numbers",null,0,9,3)[3].should.equal(9);
     });
     it('generate an array of numbers from -9 to 0 interval 1 result [-9,-8,-7,-6,-5,-4,-3,-2,-1,0]', function() {
-        [].generateScale("numbers",null,-9,0,1).should.have.length(10);
-        [].generateScale("numbers",null,-9,0,1)[0].should.equal(-9);
-        [].generateScale("numbers",null,-9,0,1)[1].should.equal(-8);
-        [].generateScale("numbers",null,-9,0,1)[2].should.equal(-7);
-        [].generateScale("numbers",null,-9,0,1)[3].should.equal(-6);
-        [].generateScale("numbers",null,-9,0,1)[4].should.equal(-5);
-        [].generateScale("numbers",null,-9,0,1)[5].should.equal(-4);
-        [].generateScale("numbers",null,-9,0,1)[6].should.equal(-3);
-        [].generateScale("numbers",null,-9,0,1)[7].should.equal(-2);
-        [].generateScale("numbers",null,-9,0,1)[8].should.equal(-1);
-        [].generateScale("numbers",null,-9,0,1)[9].should.equal(0);
+        Array().generateScale("numbers",null,-9,0,1).should.have.length(10);
+        Array().generateScale("numbers",null,-9,0,1)[0].should.equal(-9);
+        Array().generateScale("numbers",null,-9,0,1)[1].should.equal(-8);
+        Array().generateScale("numbers",null,-9,0,1)[2].should.equal(-7);
+        Array().generateScale("numbers",null,-9,0,1)[3].should.equal(-6);
+        Array().generateScale("numbers",null,-9,0,1)[4].should.equal(-5);
+        Array().generateScale("numbers",null,-9,0,1)[5].should.equal(-4);
+        Array().generateScale("numbers",null,-9,0,1)[6].should.equal(-3);
+        Array().generateScale("numbers",null,-9,0,1)[7].should.equal(-2);
+        Array().generateScale("numbers",null,-9,0,1)[8].should.equal(-1);
+        Array().generateScale("numbers",null,-9,0,1)[9].should.equal(0);
     });
     it('generate an array of numbers from 9 to 3 interval 3 result "ERROR! Impossible create an array from 9 to 3."', function() {
-        [].generateScale("numbers",null,9,3,null).should.equal('ERROR! Impossible create an array from 9 to 3.');
+        Array().generateScale("numbers",null,9,3,null).should.equal('ERROR! Impossible create an array from 9 to 3.');
     });
 
 });
