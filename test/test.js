@@ -21,8 +21,8 @@ var should = require('chai').should(),
     time = today.getHours() + ":"
         + today.getMinutes() + ":"
         + today.getSeconds(),
-    wrongTime = today.getHours() + "0:"
-        + today.getMinutes() + ":0"
+    wrongTime = today.getHours() + "00:"
+        + today.getMinutes() + ":00"
         + today.getSeconds();
 
 describe('#init', function() {
