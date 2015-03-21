@@ -1,8 +1,8 @@
 [![NPM](https://nodei.co/npm/my-prototypes.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/my-prototypes/)
 
-[![CocoaPods](https://img.shields.io/badge/autor-Marco%20Somma-lightgrey.svg?style=plastic)](https://www.npmjs.com/~marcosomma)
+[![CocoaPods](https://img.shields.io/badge/autor-Marco%20Somma-lightgrey.svg?style=plastic)](https://www.npmjs.com/~marcosomma) [![npm](https://img.shields.io/badge/license-ISC-blue.svg?style=flat)](https://www.npmjs.com/package/my-prototypes)
 
-[![npm](https://img.shields.io/badge/license-ISC-blue.svg?style=flat)](https://www.npmjs.com/package/my-prototypes) [![npm version](https://badge.fury.io/js/my-prototypes.svg)](http://badge.fury.io/js/my-prototypes) [![Codacy Badge](https://www.codacy.com/project/badge/ac6c42fb818542abaad4fb0fd05f39f1)](https://www.codacy.com/public/makso1979/my-prototypes) [![Code Climate](https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![Test Coverage](https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![Build Status](https://travis-ci.org/marcosomma/my-prototypes.svg?branch=master)](https://travis-ci.org/marcosomma/my-prototypes)
+[![npm version](https://badge.fury.io/js/my-prototypes.svg)](http://badge.fury.io/js/my-prototypes) [![Codacy Badge](https://www.codacy.com/project/badge/ac6c42fb818542abaad4fb0fd05f39f1)](https://www.codacy.com/public/makso1979/my-prototypes) [![Code Climate](https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![Test Coverage](https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![Build Status](https://travis-ci.org/marcosomma/my-prototypes.svg?branch=master)](https://travis-ci.org/marcosomma/my-prototypes)
 # my-prototypes
 Add Array, Numbers, Object and String prototypes in your project.
 
