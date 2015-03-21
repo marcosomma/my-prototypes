@@ -3,6 +3,10 @@
  */
 
 module.exports = {
+    init: function(){
+        Object.prototype.lengthJSON = this.lengthJSON;
+        Object.prototype.splitJSON = this.splitJSON;
+    },
     lengthJSON: function(json){
         //console.log('lengthJSON');
         return Object.keys(json).length;

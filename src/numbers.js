@@ -3,6 +3,11 @@
  */
 
 module.exports = {
+    init: function(){
+        Number.prototype.formatMoney = this.formatMoney;
+        Number.prototype.getSecond = this.getSecond;
+        Number.prototype.getMilliSecond = this.getMilliSecond;
+    },
     formatMoney: function(c){
         //console.log('formatMoney');
         c = isNaN(c = Math.abs(c)) ? 2 : c;

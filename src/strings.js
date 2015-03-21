@@ -5,6 +5,21 @@ var validRegEx = require('./validationRegEx.js');
 var replaceMe = require('./replaceMe.js');
 
 module.exports = {
+    init: function(){
+        String.prototype.htmlEscape = this.htmlEscape;
+        String.prototype.htmlUnescape = this.htmlUnescape;
+        String.prototype.validateContent = this.validateContent;
+        String.prototype.substringBeforeTo = this.substringBeforeTo;
+        String.prototype.substringAfterTo = this.substringAfterTo;
+        String.prototype.repeat = this.repeat;
+        String.prototype.reverseWord = this.reverseWord;
+        String.prototype.capitalize = this.capitalize;
+        String.prototype.capitalizeAll = this.capitalizeAll;
+        String.prototype.getDateEU = this.getDateEU;
+        String.prototype.getDateUS = this.getDateUS;
+        String.prototype.getDbDate = this.getDbDate;
+        String.prototype.getDbDateTime = this.getDbDateTime;
+    },
     htmlEscape:function() {
         //console.log('htmlEscape');
         return replaceMe.eHtml(this);
