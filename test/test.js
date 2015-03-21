@@ -32,6 +32,46 @@ describe('#init', function() {
 });
 
 describe('#Array', function() {
+
+    it('Remove element 3 in this array [1,2,3,3] result [1,2]', function() {
+        [1,2,3,3].remove(3).should.have.length(2);
+        [1,2,3,3].remove(3)[0].should.equal(1);
+        [1,2,3,3].remove(3)[1].should.equal(2);
+    });
+
+    it('Remove element "A" in this array ["A","B","C"] result ["B","C"]', function() {
+        ["A","B","C"].remove("A").should.have.length(2);
+        ["A","B","C"].remove("A")[0].should.equal("B");
+        ["A","B","C"].remove("A")[1].should.equal("C");
+    });
+
+    it('Remove elements [3,8,5] in this array [1,2,3,3,4,5,6,7,8,8,9,6,5,4] result [1,2,4,6,7,9,6,4]', function() {
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].remove([3,8,5]).should.have.length(8);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].remove([3,8,5])[0].should.equal(1);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].remove([3,8,5])[1].should.equal(2);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].remove([3,8,5])[2].should.equal(4);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].remove([3,8,5])[3].should.equal(6);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].remove([3,8,5])[4].should.equal(7);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].remove([3,8,5])[5].should.equal(9);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].remove([3,8,5])[6].should.equal(6);
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].remove([3,8,5])[7].should.equal(4);
+    });
+
+    it('Remove elements ["A","B","C"] in this array ["A","B","C","D","E","F"] result ["D","E","F"]', function() {
+        ["A","B","C","D","E","F"].remove(["A","B","C"]).should.have.length(3);
+        ["A","B","C","D","E","F"].remove(["A","B","C"])[0].should.equal("D");
+        ["A","B","C","D","E","F"].remove(["A","B","C"])[1].should.equal("E");
+        ["A","B","C","D","E","F"].remove(["A","B","C"])[2].should.equal("F");
+    });
+
+    it('First in this array [1,2,3,3,4,5,6,7,8,8,9,6,5,4] result 1', function() {
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].first().should.equal(1);
+    });
+
+    it('Last in this array [1,2,3,3,4,5,6,7,8,8,9,6,5,4] result 4', function() {
+        [1,2,3,3,4,5,6,7,8,8,9,6,5,4].last().should.equal(4);
+    });
+
     it('Take all even numbers in this array [1,2,3,3,4,5,6,7,8,8,9,6,5,4] result [2,4,6,8,8,6,4]', function() {
         [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even().should.have.length(7);
         [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()[0].should.equal(2);

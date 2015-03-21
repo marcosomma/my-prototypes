@@ -11,6 +11,9 @@ module.exports = {
         Array.prototype.eliminateDuplicate = this.eliminateDuplicate;
         Array.prototype.containElement = this.containElement;
         Array.prototype.generateScale = this.generateScale;
+        Array.prototype.first = this.first;
+        Array.prototype.last = this.last;
+        Array.prototype.remove = this.remove;
     },
     even: function(){
         //console.log('even');
@@ -33,6 +36,19 @@ module.exports = {
         var result = [];
         for (var i = 0; i < this.length; i++) {
             if(result.indexOf(this[i]) === -1){
+                result.push(this[i]);
+            }
+        }
+        return result;
+    },
+    remove: function(element){
+        //console.log('remove');
+        var result = [];
+        var type = element instanceof Array;
+        for (var i = 0; i < this.length; i++) {
+            if(type && element.indexOf(this[i]) === -1){
+                result.push(this[i]);
+            }else if(!type && this[i] !== element){
                 result.push(this[i]);
             }
         }
@@ -61,6 +77,14 @@ module.exports = {
             //console.log('generatScale('+mytype+','+mystyle+','+start+','+end+','+myinterval+')');
             return scaleGenerate(mytype,mystyle,start,end,myinterval);
         }
+    },
+    first: function(){
+        //console.log('first');
+        return this[0];
+    },
+    last: function(){
+        //console.log('last');
+        return this[this.length-1];
     }
 };
 

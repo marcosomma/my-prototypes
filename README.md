@@ -10,33 +10,52 @@ Add Array, Numbers, Object and String prototypes in your project.
 ```npm install my-prototypes```
 
 **Use**
-``` require('my-prototypes').init ```
+``` require('my-prototypes').init() ```
 
 ***
 
 ## Array prototypes
+- first
+- last
 - containElement
 - eliminateDuplicate
+- remove
+- generateScale
 - even
 - evenIndex
-- generateScale
 - odd
 - oddIndex
+
+**first**
+*First element in an array*
+
+```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].first()``` result ```1```
+
+**last**
+*Last element in an array*
+
+```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].last()``` result ```4```
 
 **containElement**
 *check if an array contain an element*
 
-```[["A","B","C","D","E","F"].containElement("A")``` result ``` true ```
+```["A","B","C","D","E","F"].containElement("A")``` result ``` true ```
 
 **eliminateDuplicate**
 *Eliminate all element duplicated in an array*
 
 ```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()``` result ```[1,2,3,4,5,6,7,8,9]```
 
-**even**
-*Take all even numbers in an array*
+**remove**(element/[elements])
+*Remove elements in an array*
 
-```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()``` result ```[2,4,6,8,8,6,4]```
+- example 1
+
+	```[1,2,3,3].remove(3)``` result ```[1,2]```
+
+- example 2
+
+	```["A","B","C","D","E","F"].remove(["A","B","C"])``` result ```["D","E","F"]```
 
 **generateScale**(type,style,start,end,interval)
 *generate an array of specific element*
@@ -56,6 +75,11 @@ Add Array, Numbers, Object and String prototypes in your project.
 - example 4
 
 	```var myarray = Array().generateScale('numbers',null,-9,0,1)``` result ```[-9,-8,-7,-6,-5,-4,-3,-2,-1,0]```
+
+**even**
+*Take all even numbers in an array*
+
+```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()``` result ```[2,4,6,8,8,6,4]```
 
 **evenIndex**
 *Take all even index in an array*
@@ -193,3 +217,10 @@ Add Array, Numbers, Object and String prototypes in your project.
 
 ```'mak.so1979@gmail.com'.validateContent('email')``` result ```true```
 ```'mak.so1979gmailcom'.validateContent('email')``` result ```false```
+
+
+***
+### License ISC
+*Copyright (c) 2015, Marco Somma.*
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
