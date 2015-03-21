@@ -3,6 +3,7 @@
  */
 var should = require('chai').should(),
     prototypes = require('../index'),
+    helper = require('../src/helper'),
     init = prototypes.init,
     dbDate = '2015-03-18T16:23:18.423Z',
     today = new Date(),
@@ -362,5 +363,22 @@ describe('#String', function() {
 
     it('convert DB format date "'+dbDate+'" in "18/03/2015 - 16:23:18"', function() {
         dbDate.getDbDateTime().should.equal("18/03/2015 - 16:23:18");
+    });
+});
+
+describe('#Helper', function() {
+    it('Test gerMonth', function() {
+        helper.getMonth('Jan').should.equal('1');
+        helper.getMonth('Feb').should.equal('2');
+        helper.getMonth('Mar').should.equal('3');
+        helper.getMonth('Apr').should.equal('4');
+        helper.getMonth('May').should.equal('5');
+        helper.getMonth('June').should.equal('6');
+        helper.getMonth('July').should.equal('7');
+        helper.getMonth('Aug').should.equal('8');
+        helper.getMonth('Sept').should.equal('9');
+        helper.getMonth('Oct').should.equal('10');
+        helper.getMonth('Nov').should.equal('11');
+        helper.getMonth('Dic').should.equal('12');
     });
 });

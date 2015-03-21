@@ -31,7 +31,6 @@ module.exports={
             return false;
         }
     },
-    /* istanbul ignore next */
     getMonth:function(value){
         var month = '';
         switch (value){
