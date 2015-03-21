@@ -1,8 +1,10 @@
 /**
  * Created by iMak on 17/03/15.
  */
+
 var validRegEx = require('./validationRegEx.js');
 var replaceMe = require('./replaceMe.js');
+var helper = require('./helper.js');
 
 module.exports = {
     init: function(){
@@ -87,7 +89,7 @@ module.exports = {
     getDateEU : function(){
         //console.log('getDateEU');
         var split = String(this).split(' '),
-            month = getMonth(split[1]),
+            month = helper.getMonth(split[1]),
             day = split[2],
             year = String(split[3]);
         return day+'/'+month+'/'+year;
@@ -95,7 +97,7 @@ module.exports = {
     getDateUS : function(){
         //console.log('getDateUS');
         var split = String(this).split(' '),
-            month = getMonth(split[1]),
+            month = helper.getMonth(split[1]),
             day = split[2],
             year = split[3];
         return month+'/'+day+'/'+year;
@@ -121,47 +123,3 @@ module.exports = {
         return String(this).split("").reverse().join("");
     }
 };
-
-/* istanbul ignore next */
-function getMonth(value){
-    var month = '';
-    switch (value){
-        case 'Jan':
-            month ='1' ;
-            break;
-        case 'Feb':
-            month ='2' ;
-            break;
-        case 'Mar':
-            month ='3' ;
-            break;
-        case 'Apr':
-            month ='4' ;
-            break;
-        case 'May':
-            month ='5' ;
-            break;
-        case 'June':
-            month ='6' ;
-            break;
-        case 'July':
-            month ='7' ;
-            break;
-        case 'Aug':
-            month ='8' ;
-            break;
-        case 'Sept':
-            month ='9' ;
-            break;
-        case 'Oct':
-            month ='10' ;
-            break;
-        case 'Nov':
-            month ='11' ;
-            break;
-        case 'Dic':
-            month ='12' ;
-            break;
-    }
-    return month;
-}

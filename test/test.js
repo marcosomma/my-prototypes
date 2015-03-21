@@ -167,6 +167,14 @@ describe('#Array', function() {
 });
 
 describe('#Number', function() {
+    it('check if 1000000 is even result true', function() {
+        Number(1000000).isEven().should.equal(true);
+    });
+
+    it('check if 1000001 is even result false', function() {
+        Number(1000001).isEven().should.equal(false);
+    });
+
     it('converts 1000000.12 into 1,000,000.12', function() {
         1000000.12.formatMoney(2).should.equal('1,000,000.12');
     });
@@ -281,12 +289,12 @@ describe('#String', function() {
         wrongTime.validateContent('time').should.equal(false);
     });
 
-    it('validate "127.0.0.1" as ip-address', function() {
-        '127.0.0.1'.validateContent('ip-address').should.equal(true);
+    it('validate "127.0.0.1" as ip', function() {
+        '127.0.0.1'.validateContent('ip').should.equal(true);
     });
 
-    it('validate "999.99.256.1" is NOT ip-address', function() {
-        '999.99.256.1'.validateContent('ip-address').should.equal(false);
+    it('validate "999.99.256.1" is NOT ip', function() {
+        '999.99.256.1'.validateContent('ip').should.equal(false);
     });
 
     it('validate "+353 0866656" as phone', function() {

@@ -2,11 +2,18 @@
  * Created by iMak on 17/03/15.
  */
 
+var helper = require('./helper.js');
+
 module.exports = {
     init: function(){
         Number.prototype.formatMoney = this.formatMoney;
         Number.prototype.getSecond = this.getSecond;
         Number.prototype.getMilliSecond = this.getMilliSecond;
+        Number.prototype.isEven = this.isEven;
+    },
+    isEven: function(){
+        //console.log('isEven');
+        return helper.is_odd(this);
     },
     formatMoney: function(c){
         //console.log('formatMoney');

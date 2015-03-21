@@ -1,7 +1,10 @@
 /**
  * Created by iMak on 17/03/15.
  */
+
+var helper = require('./helper.js');
 var letters_array = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
 module.exports = {
     init: function(){
         Array.prototype.even = this.even;
@@ -17,19 +20,19 @@ module.exports = {
     },
     even: function(){
         //console.log('even');
-        return iterationOddEven(false,true,this);
+        return helper.iterationOddEven(false,true,this);
     },
     odd: function(){
         //console.log('odd');
-        return iterationOddEven(false,false,this);
+        return helper.iterationOddEven(false,false,this);
     },
     evenIndex: function(){
         //console.log('evenIndex');
-        return iterationOddEven(true,true,this);
+        return helper.iterationOddEven(true,true,this);
     },
     oddIndex: function(){
         //console.log('oddIndex');
-        return iterationOddEven(true,false,this);
+        return helper.iterationOddEven(true,false,this);
     },
     eliminateDuplicate: function(){
         //console.log('eliminateDuplicate');
@@ -75,7 +78,7 @@ module.exports = {
             return 'ERROR! Impossible create an array from ' +start+ ' to ' +end+'.';
         } else {
             //console.log('generatScale('+mytype+','+mystyle+','+start+','+end+','+myinterval+')');
-            return scaleGenerate(mytype,mystyle,start,end,myinterval);
+            return helper.scaleGenerate(mytype,mystyle,start,end,myinterval);
         }
     },
     first: function(){
@@ -87,34 +90,3 @@ module.exports = {
         return this[this.length-1];
     }
 };
-
-function iterationOddEven(index,odd,array){
-    var result = [],
-        value,
-        check ;
-    for (var i = 0; i < array.length; i++) {
-        value = index ? i : array[i];
-        check = is_odd(value);
-        if((odd && check) || (!odd && !check)) {
-            result.push(array[i]);
-        }
-    }
-    return result;
-}
-
-function scaleGenerate(type,style,start,end,interval){
-    var result = [];
-    for (var i = start; i <= end; i = i + interval) {
-        var value = type === 1 ? i : style === 1? letters_array[i].toUpperCase() : letters_array[i].toLowerCase();
-        result.push(value);
-    }
-    return result;
-}
-
-function is_odd(value){
-    if(value % 2 === 0) {
-        return true;
-    } else {
-        return false;
-    }
-}

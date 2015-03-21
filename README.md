@@ -102,6 +102,7 @@ Add Array, Numbers, Object and String prototypes in your project.
 - formatMoney
 - getSecond
 - getMilliSecond
+- isEven
 
 **formatMoney**(decimals)
 *Convert integer o float number in a money value*
@@ -117,6 +118,11 @@ Add Array, Numbers, Object and String prototypes in your project.
 *Return milliseconds*
 
 ```Number().getMilliSecond(1,1,1)``` result ```3661000```
+
+**isEven**
+*Check is the number is even*
+
+```Number(124).isEven()``` result ```true```
 
 ***
 

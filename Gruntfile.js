@@ -11,7 +11,18 @@ module.exports = function(grunt){
         shell: {
             code_climate: {
                 command:[
-                    'CODECLIMATE_REPO_TOKEN=5fbffedf45c6f78952b3313671300948260aaf2fc7d05d0a01086b2950a9fd3c codeclimate< ./coverage/lcov.info'
+                    'codeclimate< ./coverage/lcov.info'
+                ].join('&&'),
+                options: {
+                    stderr: false,
+                    execOptions: {
+                        cwd: ''
+                    }
+                }
+            },
+            codacy_coverage: {
+                command:[
+                    './node_modules/codacy-coverage/bin/codacy-coverage.js && rm -rf ./coverage'
                 ].join('&&'),
                 options: {
                     stderr: false,
@@ -34,5 +45,6 @@ module.exports = function(grunt){
 
     grunt.registerTask('coverage', [
         'mocha_istanbul:coverage',
-        'shell:code_climate']);
+        'shell:code_climate',
+        'shell:codacy_coverage']);
 };
