@@ -132,11 +132,12 @@ Add Array, Numbers, Object and String prototypes in your project.
 ## Object prototypes
 - lengthObject
 - splitElements
+- concatElements
 
 **lengthObject**
 *Count elements*
 
-``` var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"}; ``
+``` var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"}; ```
 
 ```a.length()``` result ```5```
 
