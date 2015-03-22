@@ -215,6 +215,14 @@ describe('#Object', function() {
         Object().generator(["key1","value1","key2",{subkey1:"subvalue1",subkey2:"subvalue2"},"key3",["subvalue1","subvalue2"]]).key3[0].should.equal("subvalue1");
         Object().generator(["key1","value1","key2",{subkey1:"subvalue1",subkey2:"subvalue2"},"key3",["subvalue1","subvalue2"]]).key3[1].should.equal("subvalue2");
     });
+    it('Convert to Array the values in an Object result {key1:"value1",key2:{subkey1:"subvalue1",subkey2:"subvalue2"},key3:["subvalue1","subvalue2"]} result ["value1",{"subkey1":"subvalue1","subkey2":"subvalue2"},["subvalue1","subvalue1"]] ', function() {
+        var o = {key1:"value1",key2:{subkey1:"subvalue1",subkey2:"subvalue2"},key3:["subvalue1","subvalue2"]};
+        o.toArray()[0].should.equal("value1");
+        o.toArray()[1].subkey1.should.equal("subvalue1");
+        o.toArray()[1].subkey2.should.equal("subvalue2");
+        o.toArray()[2][0].should.equal("subvalue1");
+        o.toArray()[2][1].should.equal("subvalue2");
+    });
 });
 
 describe('#String', function() {

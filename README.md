@@ -208,6 +208,7 @@ result
 - generator
 - lengthObject
 - splitElements
+- toArray
 
 ### concatElements([{key1:value1},{key2:value2},{key3:value3}])
 *Concat more Objects in a single Object.git tag*
@@ -248,7 +249,18 @@ result
 
 result 
 
- ``` [{key1:'value1'},{key2:'value2'},{key3:'value3'}] ``` 
+ ``` [{key1:'value1'},{key2:'value2'},{key3:'value3'}] ```
+
+### toArray
+*Generate an array with object values*
+
+``` var o = {key1:"value1",key2:{subkey1:"subvalue1",subkey2:"subvalue2"},key3:["subvalue1","subvalue2"]}; ```
+
+``` o.toArray(); ```
+
+result
+
+ ``` ["value1",{subkey1:"subvalue1",subkey2:"subvalue2"},["subvalue1","subvalue2"]] ```
 
 ***
 

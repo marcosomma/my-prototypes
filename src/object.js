@@ -8,6 +8,7 @@ module.exports = {
         Object.prototype.splitElements = this.splitElements;
         Object.prototype.concatElements = this.concatElements;
         Object.prototype.generator = this.generator;
+        Object.prototype.toArray = this.toArray;
     },
     length: function(){
         //console.log('lengthObject');
@@ -37,6 +38,16 @@ module.exports = {
         var result = {};
         for(var i=0;i<array.length;i=i+2){
             result[array[i]] = array[i+1];
+        }
+        return result;
+    },
+    toArray: function(){
+        //console.log('toArray');
+        var result = [];
+        for(var i=0;i<Object.keys(this).length;i++){
+            var obj;
+            obj = this[Object.keys(this)[i]];
+            result.push(obj);
         }
         return result;
     }
