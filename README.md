@@ -123,9 +123,9 @@ Add Array, Numbers, Object and String prototypes in your project.
 **isEven**
 *Check is the number is even*
 
-````var n = 124;```
+```var n = 124;```
 
-````n.isEven()``` result ```true```
+```n.isEven()``` result ```true```
 
 ***
 
