@@ -1,5 +1,6 @@
-environment:
-  CODECLIMATE_REPO_TOKEN : 5fbffedf45c6f78952b3313671300948260aaf2fc7d05d0a01086b2950a9fd3c
+machine:
+  environment:
+    CODECLIMATE_REPO_TOKEN : 5fbffedf45c6f78952b3313671300948260aaf2fc7d05d0a01086b2950a9fd3c
 
 dependencies:
   pre:
