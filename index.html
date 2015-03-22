@@ -33,9 +33,11 @@
       <section id="main_content" class="inner">
         <p><a href="https://nodei.co/npm/my-prototypes/"><img src="https://nodei.co/npm/my-prototypes.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="NPM"></a></p>
 
-<p><a href="https://www.npmjs.com/%7Emarcosomma"><img src="https://img.shields.io/badge/autor-Marco%20Somma-lightgrey.svg?style=flat" alt="CocoaPods"></a> <a href="https://www.npmjs.com/package/my-prototypes"><img src="https://img.shields.io/badge/license-ISC-blue.svg?style=flat" alt="npm"></a></p>
+<p><a href="https://www.npmjs.com/package/my-prototypes"><img src="https://img.shields.io/badge/version-BETA%20--%20in%20porgress-red.svg" alt=""></a></p>
 
-<p><a href="http://badge.fury.io/js/my-prototypes"><img src="https://badge.fury.io/js/my-prototypes.svg" alt="npm version"></a> <a href="https://www.codacy.com/public/makso1979/my-prototypes"><img src="https://www.codacy.com/project/badge/ac6c42fb818542abaad4fb0fd05f39f1" alt="Codacy Badge"></a> <a href="https://codeclimate.com/github/marcosomma/my-prototypes"><img src="https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg" alt="Code Climate"></a> <a href="https://codeclimate.com/github/marcosomma/my-prototypes"><img src="https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg" alt="Test Coverage"></a> <a href="https://travis-ci.org/marcosomma/my-prototypes"><img src="https://travis-ci.org/marcosomma/my-prototypes.svg?branch=master" alt="Build Status"></a></p>
+<p><a href="https://www.npmjs.com/%7Emarcosomma"><img src="https://img.shields.io/badge/autor-Marco%20Somma-lightgrey.svg?style=flat" alt=""></a> <a href="https://www.npmjs.com/package/my-prototypes"><img src="https://img.shields.io/badge/license-ISC-blue.svg?style=flat" alt=""></a> <a href="https://www.npmjs.com/package/my-prototypes"><img src="https://img.shields.io/npm/dm/my-prototypes.svg" alt="npm"></a></p>
+
+<p><a href="http://badge.fury.io/js/my-prototypes"><img src="https://badge.fury.io/js/my-prototypes.svg" alt="npm version"></a> <a href="https://www.codacy.com/public/makso1979/my-prototypes"><img src="https://www.codacy.com/project/badge/ac6c42fb818542abaad4fb0fd05f39f1" alt="Codacy Badge"></a> <a href="https://codeclimate.com/github/marcosomma/my-prototypes"><img src="https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg" alt="Code Climate"></a> <a href="https://codeclimate.com/github/marcosomma/my-prototypes"><img src="https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg" alt="Test Coverage"></a> <a href="https://circleci.com/gh/marcosomma/my-prototypes/tree/master"><img src="https://img.shields.io/circleci/project/marcosomma/my-prototypes/master.svg" alt="CircleCI branch"></a></p>
 
 <h1>
 <a id="my-prototypes" class="anchor" href="#my-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>my-prototypes</h1>
@@ -178,7 +180,9 @@
 <p><strong>isEven</strong>
 <em>Check is the number is even</em></p>
 
-<p><code>Number(124).isEven()</code> result <code>true</code></p>
+<p><code>var n = 124;</code></p>
+
+<p><code>n.isEven()</code> result <code>true</code></p>
 
 <hr>
 
@@ -186,19 +190,29 @@
 <a id="object-prototypes" class="anchor" href="#object-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Object prototypes</h2>
 
 <ul>
-<li>lengthJSON</li>
-<li>splitJSON</li>
+<li>lengthObject</li>
+<li>splitElements</li>
+<li>concatElements</li>
 </ul>
 
-<p><strong>lengthJSON</strong>
-<em>Count element in a plane json</em></p>
+<p><strong>lengthObject</strong>
+<em>Count elements</em></p>
 
-<p><code>Object.lengthJSON({"key1":"value1","key2":"value2","key3":"value3","key4":"value4","key5":"value5"})</code> result <code>5</code></p>
+<p><code>var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"};</code></p>
 
-<p><strong>splitJSON</strong>
-<em>Split element of a plane json in an array of single elements</em></p>
+<p><code>a.length()</code> result <code>5</code></p>
 
-<p><code>Object.splitJSON({"key1":"value1","key2":"value2","key3":"value3"})</code> result <code>[{key1:'value1'},{key2:'value2'},{key3:'value3'}]</code></p>
+<p><strong>splitElements</strong>
+<em>Split element in an array of single elements</em></p>
+
+<p><code>var a = {key1:"value1",key2:"value2",key3:"value3"};</code></p>
+
+<p><code>a.splitElements()</code> result <code>[{key1:'value1'},{key2:'value2'},{key3:'value3'}]</code></p>
+
+<p><strong>concatElements</strong>
+<em>Concat more Objects in a single Object.git tag</em></p>
+
+<p><code>Object().concatElements([{key1:'value1'},{key2:'value2'},{key3:'value3'}])</code> result <code>{key1:"value1",key2:"value2",key3:"value3"}</code></p>
 
 <hr>
 
