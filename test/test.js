@@ -169,11 +169,13 @@ describe('#Array', function() {
 
 describe('#Number', function() {
     it('check if 1000000 is even result true', function() {
-        Number(1000000).isEven().should.equal(true);
+        var n = 1000000;
+        n.isEven().should.equal(true);
     });
 
     it('check if 1000001 is even result false', function() {
-        Number(1000001).isEven().should.equal(false);
+        var n = 1000001;
+        n.isEven().should.equal(false);
     });
 
     it('converts 1000000.12 into 1,000,000.12', function() {
@@ -190,14 +192,21 @@ describe('#Number', function() {
 });
 
 describe('#Object', function() {
-    it('Count element in a plane json {"key1":"value1","key2":"value2","key3":"value3","key4":"value4","key5":"value5"} result 5', function() {
-        Object.lengthJSON({"key1":"value1","key2":"value2","key3":"value3","key4":"value4","key5":"value5"}).should.equal(5);
+    it('Count element in {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"} result 5', function() {
+        var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"};
+        a.length().should.equal(5);
     });
-    it('Split element of a plane json in an array of single elements {"key1":"value1","key2":"value2","key3":"value3"} result [{key1:"value1"},{key2:"value2"},{key3:"value3"}]', function() {
-        Object.splitJSON({"key1":"value1","key2":"value2","key3":"value3"}).should.have.length(3);
-        Object.splitJSON({"key1":"value1","key2":"value2","key3":"value3"})[0].key1.should.equal("value1");
-        Object.splitJSON({"key1":"value1","key2":"value2","key3":"value3"})[1].key2.should.equal("value2");
-        Object.splitJSON({"key1":"value1","key2":"value2","key3":"value3"})[2].key3.should.equal("value3");
+    it('Split Object in an array of single elements {key1:"value1",key2:"value2",key3:"value3"} result [{key1:"value1"},{key2:"value2"},{key3:"value3"}]', function() {
+        var a = {key1:"value1",key2:"value2",key3:"value3"};
+        a.splitElements().should.have.length(3);
+        a.splitElements()[0].key1.should.equal("value1");
+        a.splitElements()[1].key2.should.equal("value2");
+        a.splitElements()[2].key3.should.equal("value3");
+    });
+    it('Concat Objects in an array [{key1:"value1"},{key2:"value2"},{key3:"value3" result {key1:"value1",key2:"value2",key3:"value3"}', function() {
+        Object().concatElements([{key1:"value1"},{key2:"value2"},{key3:"value3"}]).key1.should.equal("value1");
+        Object().concatElements([{key1:"value1"},{key2:"value2"},{key3:"value3"}]).key2.should.equal("value2");
+        Object().concatElements([{key1:"value1"},{key2:"value2"},{key3:"value3"}]).key3.should.equal("value3");
     });
 });
 

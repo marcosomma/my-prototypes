@@ -4,20 +4,30 @@
 
 module.exports = {
     init: function(){
-        Object.prototype.lengthJSON = this.lengthJSON;
-        Object.prototype.splitJSON = this.splitJSON;
+        Object.prototype.length = this.length;
+        Object.prototype.splitElements = this.splitElements;
+        Object.prototype.concatElements = this.concatElements;
     },
-    lengthJSON: function(json){
-        //console.log('lengthJSON');
-        return Object.keys(json).length;
+    length: function(){
+        //console.log('lengthObject');
+        return Object.keys(this).length;
     },
-    splitJSON: function(json){
-        //console.log('lengthJSON');
+    splitElements: function(){
+        //console.log('splitElements');
         var result = [];
-        for(var i=0;i<Object.keys(json).length;i++){
+        for(var i=0;i<Object.keys(this).length;i++){
             var obj = {};
-            obj[Object.keys(json)[i]] = json[Object.keys(json)[i]];
+            obj[Object.keys(this)[i]] = this[Object.keys(this)[i]];
             result.push(obj);
+        }
+        return result;
+    },
+    concatElements: function(array){
+        //console.log('splitElements');
+        var result = {};
+        for(var i=0;i<array.length;i++){
+            var obj = array[i];
+            result[Object.keys(obj)] = obj[Object.keys(obj)];
         }
         return result;
     }

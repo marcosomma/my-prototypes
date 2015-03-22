@@ -123,23 +123,35 @@ Add Array, Numbers, Object and String prototypes in your project.
 **isEven**
 *Check is the number is even*
 
-```Number(124).isEven()``` result ```true```
+``` var n = 124; ``
+
+```n.isEven()``` result ```true```
 
 ***
 
 ## Object prototypes
-- lengthJSON
-- splitJSON
+- lengthObject
+- splitElements
 
-**lengthJSON**
-*Count element in a plane json*
+**lengthObject**
+*Count elements*
 
-```Object.lengthJSON({"key1":"value1","key2":"value2","key3":"value3","key4":"value4","key5":"value5"})``` result ```5```
+``` var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"}; ``
 
-**splitJSON**
-*Split element of a plane json in an array of single elements*
+```a.length()``` result ```5```
 
-```Object.splitJSON({"key1":"value1","key2":"value2","key3":"value3"})``` result ```[{key1:'value1'},{key2:'value2'},{key3:'value3'}]```
+
+**splitElements**
+*Split element in an array of single elements*
+
+```var a = {key1:"value1",key2:"value2",key3:"value3"};```
+
+```a.splitElements()``` result ```[{key1:'value1'},{key2:'value2'},{key3:'value3'}]```
+
+**concatElements**
+*Concat more Objects in a single Object.git tag*
+
+```Object().concatElements([{key1:'value1'},{key2:'value2'},{key3:'value3'}])``` result ```[{key1:"value1",key2:"value2",key3:"value3"}]```
 
 ***
 
