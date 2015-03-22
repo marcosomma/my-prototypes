@@ -7,6 +7,7 @@ module.exports = {
         Object.prototype.length = this.length;
         Object.prototype.splitElements = this.splitElements;
         Object.prototype.concatElements = this.concatElements;
+        Object.prototype.generator = this.generator;
     },
     length: function(){
         //console.log('lengthObject');
@@ -28,6 +29,14 @@ module.exports = {
         for(var i=0;i<array.length;i++){
             var obj = array[i];
             result[Object.keys(obj)] = obj[Object.keys(obj)];
+        }
+        return result;
+    },
+    generator: function(array){
+        //console.log('splitElements');
+        var result = {};
+        for(var i=0;i<array.length;i=i+2){
+            result[array[i]] = array[i+1];
         }
         return result;
     }

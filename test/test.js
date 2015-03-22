@@ -208,6 +208,13 @@ describe('#Object', function() {
         Object().concatElements([{key1:"value1"},{key2:"value2"},{key3:"value3"}]).key2.should.equal("value2");
         Object().concatElements([{key1:"value1"},{key2:"value2"},{key3:"value3"}]).key3.should.equal("value3");
     });
+    it('Generate Objects from array ["key1","value1","key2",{"subkey1":"subvalue1","subkey2":"subvalue2"},"key3",["subvalue1","subvalue1"]] result {key1:"value1",key2:{subkey1:"subvalue1",subkey2:"subvalue2"},key3:["subvalue1","subvalue2"]}', function() {
+        Object().generator(["key1","value1","key2",{subkey1:"subvalue1",subkey2:"subvalue2"},"key3",["subvalue1","subvalue2"]]).key1.should.equal("value1");
+        Object().generator(["key1","value1","key2",{subkey1:"subvalue1",subkey2:"subvalue2"},"key3",["subvalue1","subvalue2"]]).key2.subkey1.should.equal("subvalue1");
+        Object().generator(["key1","value1","key2",{subkey1:"subvalue1",subkey2:"subvalue2"},"key3",["subvalue1","subvalue2"]]).key2.subkey2.should.equal("subvalue2");
+        Object().generator(["key1","value1","key2",{subkey1:"subvalue1",subkey2:"subvalue2"},"key3",["subvalue1","subvalue2"]]).key3[0].should.equal("subvalue1");
+        Object().generator(["key1","value1","key2",{subkey1:"subvalue1",subkey2:"subvalue2"},"key3",["subvalue1","subvalue2"]]).key3[1].should.equal("subvalue2");
+    });
 });
 
 describe('#String', function() {

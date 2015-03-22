@@ -32,40 +32,68 @@ Add Array, Numbers, Object and String prototypes in your project.
 **first**
 *First element in an array*
 
-```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].first()``` result ```1```
+```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].first()```
+
+result
+
+```1```
 
 **last**
 *Last element in an array*
 
-```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].last()``` result ```4```
+```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].last()```
+
+result
+
+```4```
 
 **containElement**
 *check if an array contain an element*
 
-```["A","B","C","D","E","F"].containElement("A")``` result ``` true ```
+```["A","B","C","D","E","F"].containElement("A")```
+
+ result
+
+``` true ```
 
 **eliminateDuplicate**
 *Eliminate all element duplicated in an array*
 
-```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()``` result ```[1,2,3,4,5,6,7,8,9]```
+```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()```
+
+result
+
+```[1,2,3,4,5,6,7,8,9]```
 
 **remove**(element/[elements])
 *Remove elements in an array*
 
 - example 1
 
-	```[1,2,3,3].remove(3)``` result ```[1,2]```
+	```[1,2,3,3].remove(3)```
+
+	result
+
+	```[1,2]```
 
 - example 2
 
-	```["A","B","C","D","E","F"].remove(["A","B","C"])``` result ```["D","E","F"]```
+	```["A","B","C","D","E","F"].remove(["A","B","C"])```
+
+	result
+
+	```["D","E","F"]```
 
 **generateScale**(type,style,start,end,interval)
 *generate an array of specific element*
 
 - example 1
 
-	```var myarray = Array().generateScale('letters','upper','a','c',null)``` result ```["A","B","C"]```
+	```var myarray = Array().generateScale('letters','upper','a','c',null)```
+
+	result
+
+	```["A","B","C"]```
 
 - example 2
 
@@ -132,9 +160,22 @@ Add Array, Numbers, Object and String prototypes in your project.
 ***
 
 ## Object prototypes
+- concatElements
+- generator
 - lengthObject
 - splitElements
-- concatElements
+
+**concatElements**
+*Concat more Objects in a single Object.git tag*
+
+```Object().concatElements([{key1:'value1'},{key2:'value2'},{key3:'value3'}])``` result ```{key1:"value1",key2:"value2",key3:"value3"}```
+
+**generator**
+*Generate Objects from an array [key,value,key2,value2,key3,value3.....]*
+
+``` var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"}; ```
+
+```a.length()``` result ```5```
 
 **lengthObject**
 *Count elements*
@@ -149,12 +190,11 @@ Add Array, Numbers, Object and String prototypes in your project.
 
 ```var a = {key1:"value1",key2:"value2",key3:"value3"};```
 
-```a.splitElements()``` result ```[{key1:'value1'},{key2:'value2'},{key3:'value3'}]```
+```a.splitElements()```
 
-**concatElements**
-*Concat more Objects in a single Object.git tag*
+result
 
-```Object().concatElements([{key1:'value1'},{key2:'value2'},{key3:'value3'}])``` result ```{key1:"value1",key2:"value2",key3:"value3"}```
+```[{key1:'value1'},{key2:'value2'},{key3:'value3'}]```
 
 ***
 

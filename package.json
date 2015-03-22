@@ -1,6 +1,6 @@
 {
   "name": "my-prototypes",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "Add Array, Numbers, Object and String prototypes in your project.",
   "main": "index.js",
   "scripts": {
@@ -35,10 +35,11 @@
     "database",
     "even",
     "odd",
-    "json length",
-    "json split",
-    "length json",
-    "split json",
+    "object length",
+    "object split",
+    "length object",
+    "split object",
+    "generate object",
     "array eliminate duplicate",
     "array contain element",
     "array generate scale",
