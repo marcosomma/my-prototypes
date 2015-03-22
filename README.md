@@ -9,10 +9,10 @@
 # my-prototypes
 Add Array, Numbers, Object and String prototypes in your project.
 
-####Install
+#### Install
  ``` npm install my-prototypes ``` 
 
-####Use
+#### Use
  ```  require('my-prototypes').init()  ``` 
 
 ***
@@ -29,7 +29,7 @@ Add Array, Numbers, Object and String prototypes in your project.
 - odd
 - oddIndex
 
-####first
+#### first
 *First element in an array*
 
  ```  [1,2,3,3,4,5,6,7,8,8,9,6,5,4].first()  ```  
@@ -38,7 +38,7 @@ result
 
  ``` 1 ``` 
 
-####last
+#### last
 *Last element in an array*
 
  ``` [1,2,3,3,4,5,6,7,8,8,9,6,5,4].last() ``` 
@@ -47,7 +47,7 @@ result
 
  ``` 4 ``` 
 
-####containElement
+#### containElement
 *check if an array contain an element*
 
  ``` ["A","B","C","D","E","F"].containElement("A") ``` 
@@ -56,7 +56,7 @@ result
 
  ```  true  ``` 
 
-####eliminateDuplicate
+#### eliminateDuplicate
 *Eliminate all element duplicated in an array*
 
  ``` [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even() ``` 
@@ -65,7 +65,7 @@ result
 
  ``` [1,2,3,4,5,6,7,8,9] ``` 
 
-####remove(element/[elements])
+#### remove(element/[elements])
 *Remove elements in an array*
 
 - example 1
@@ -84,7 +84,7 @@ result
 	
 	 ``` ["D","E","F"] ``` 
 
-####generateScale(type,style,start,end,interval)
+#### generateScale(type,style,start,end,interval)
 *generate an array of specific element*
 
 - example 1
@@ -119,7 +119,7 @@ result
 
 	 ``` [-9,-8,-7,-6,-5,-4,-3,-2,-1,0] ``` 
 
-####even
+#### even
 *Take all even numbers in an array*
 
  ``` [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even() ```  
@@ -128,7 +128,7 @@ result
 
  ``` [2,4,6,8,8,6,4] ``` 
 
-####evenIndex
+#### evenIndex
 *Take all even index in an array*
 
  ``` ["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex() ```  
@@ -137,7 +137,7 @@ result
 
  ``` ["a","b","c","d","e","f"] ``` 
 
-####odd
+#### odd
 *Take all odd numbers in an array*
 
  ``` [1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd() ```  
@@ -146,7 +146,7 @@ result
 
  ``` [1,3,3,5,7,9,5] ``` 
 
-####oddIndex
+#### oddIndex
 *Take all odd index in an array*
 
  ``` ["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex() ```  
@@ -163,7 +163,7 @@ result
 - getMilliSecond
 - isEven
 
-####formatMoney(decimals)
+#### formatMoney(decimals)
 *Convert integer o float number in a money value*
 
  ``` 1000000.12.formatMoney(2) ```  
@@ -172,7 +172,7 @@ result
 
  ``` "1,000,000.12" ``` 
 
-####getSecond(hours,minutes,seconds)
+#### getSecond(hours,minutes,seconds)
 *Return seconds*
 
  ``` Number().getSecond(1,1,1) ```  
@@ -181,7 +181,7 @@ result
 
  ``` 3661 ``` 
 
-####getMilliSecond(hours,minutes,seconds)
+#### getMilliSecond(hours,minutes,seconds)
 *Return milliseconds*
 
  ``` Number().getMilliSecond(1,1,1) ```  
@@ -190,7 +190,7 @@ result
 
  ``` 3661000 ``` 
 
-####isEven
+#### isEven
 *Check is the number is even*
 
  ``` var n = 124; ``` 
@@ -209,7 +209,7 @@ result
 - lengthObject
 - splitElements
 
-####concatElements([{key1:value1},{key2:value2},{key3:value3}])
+#### concatElements([{key1:value1},{key2:value2},{key3:value3}])
 *Concat more Objects in a single Object.git tag*
 
  ``` Object().concatElements([{key1:'value1'},{key2:'value2'},{key3:'value3'}]) ```  
@@ -218,7 +218,7 @@ result
 
  ``` {key1:"value1",key2:"value2",key3:"value3"} ``` 
 
-####generator([key,value,key2,value2,key3,value3.....])
+#### generator([key,value,key2,value2,key3,value3.....])
 *Generate Objects from an array*
 
  ``` Object().generator(["key1","value1","key2",{subkey1:"subvalue1",subkey2:"subvalue2"},"key3",["subvalue1","subvalue2"]]) ```  
@@ -227,7 +227,7 @@ result
 
  ``` {key1:"value1",key2:{subkey1:"subvalue1",subkey2:"subvalue2"},key3:["subvalue1","subvalue2"]} ``` 
 
-####lengthObject
+#### lengthObject
 *Count elements*
 
  ```  var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"};  ``` 
@@ -239,7 +239,7 @@ result
  ``` 5 ``` 
 
 
-####splitElements
+#### splitElements
 *Split element in an array of single elements*
 
  ``` var a = {key1:"value1",key2:"value2",key3:"value3"}; ``` 
@@ -267,7 +267,7 @@ result
 - substringBeforeTo
 - validateContent (dateEU, dateUS, time, email, ip-address, alphanumeric and phone)
 
-####capitalize
+#### capitalize
 *Capitalize first letter in a word*
 
  ``` 'test'.capitalize() ```  
@@ -276,7 +276,7 @@ result
 
  ``` "Test" ``` 
 
-####capitalizeAll
+#### capitalizeAll
 *Capitalize all first letters of all word contained in a sentence separate by space*
 
  ``` 'test test Test test'.capitalizeAll() ```  
@@ -285,7 +285,7 @@ result
 
  ``` "Test Test Test Test" ``` 
 
-####getDateEU
+#### getDateEU
 *Convert  ``` new Date ```  in european format date*
 
  ``` String(new Date).getDateEU() ```  
@@ -294,7 +294,7 @@ result
 
  ``` dd/mm/yyyy ``` 
 
-####getDateUS
+#### getDateUS
 *Convert  ``` new Date ```  in american format date*
 
  ``` String(new Date).getDateUS() ```  
@@ -303,7 +303,7 @@ result
 
  ``` mm/dd/yyyy ``` 
 
-####getDbDate
+#### getDbDate
 *Convert Database formar date  ``` 2015-03-18T16:23:18.423Z ```  in european format date*
 
  ``` '2015-03-18T16:23:18.423Z'.getDbDate() ```  
@@ -312,7 +312,7 @@ result
 
  ``` dd/mm/yyyy ``` 
 
-####getDbDateTime
+#### getDbDateTime
 *Convert Database formar date  ``` 2015-03-18T16:23:18.423Z ```  in european format date and time*
 
  ``` '2015-03-18T16:23:18.423Z'.getDbDateTime() ```  
@@ -321,7 +321,7 @@ result
 
  ``` dd/mm/yyyy - hh:mm:ss ``` 
 
-####htmlEscape
+#### htmlEscape
 *Convert normal string in a html string*
 
  ``` 'Marco&Co'.htmlEscape() ```  
@@ -330,7 +330,7 @@ result
 
  ``` Marco&#38;Co ``` 
 
-####htmlUnescape
+#### htmlUnescape
 *Convert html string in a normal string*
 
  ``` 'Marco&#38;Co'.htmlUnescape() ```  
@@ -339,7 +339,7 @@ result
 
  ``` Marco&Co ``` 
 
-####repeat
+#### repeat
 *Repeat a word 'n' times*
 
  ``` 'test0'.repeat(3) ```  
@@ -348,7 +348,7 @@ result
 
  ``` "test0test0test0" ``` 
 
-####reverseWord
+#### reverseWord
 *Reverse a word*
 
  ``` 'test0'.reverseWord() ```  
@@ -357,7 +357,7 @@ result
 
  ``` "0tset" ``` 
 
-####substringBeforeTo
+#### substringBeforeTo
 *Return substring before an symbol*
 
  ``` 'test0.test1'.substringBeforeTo('.') ```  
@@ -366,7 +366,7 @@ result
 
  ``` "test0" ``` 
 
-####substringAfterTo
+#### substringAfterTo
 *Return substring after an symbol if the symbol is contained more times return an array*
 
 - example 1
@@ -385,7 +385,7 @@ result
 
  	``` ["test1","test2","test3"] ``` 
 
-####validateContent
+#### validateContent
 *Validate content in a string*
 
 - example 1
