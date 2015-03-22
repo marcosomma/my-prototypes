@@ -10,10 +10,10 @@
 Add Array, Numbers, Object and String prototypes in your project.
 
 **Install**
-```npm install my-prototypes```
+ ``` npm install my-prototypes ``` 
 
 **Use**
-``` require('my-prototypes').init() ```
+ ```  require('my-prototypes').init()  ``` 
 
 ***
 
@@ -32,100 +32,128 @@ Add Array, Numbers, Object and String prototypes in your project.
 **first**
 *First element in an array*
 
-```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].first()```
+ ```  [1,2,3,3,4,5,6,7,8,8,9,6,5,4].first()  ```  
 
 result
 
-```1```
+ ``` 1 ``` 
 
 **last**
 *Last element in an array*
 
-```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].last()```
+ ``` [1,2,3,3,4,5,6,7,8,8,9,6,5,4].last() ``` 
 
 result
 
-```4```
+ ``` 4 ``` 
 
 **containElement**
 *check if an array contain an element*
 
-```["A","B","C","D","E","F"].containElement("A")```
-
+ ``` ["A","B","C","D","E","F"].containElement("A") ``` 
+ 
  result
 
-``` true ```
+ ```  true  ``` 
 
 **eliminateDuplicate**
 *Eliminate all element duplicated in an array*
 
-```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()```
+ ``` [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even() ``` 
+ 
+result 
 
-result
-
-```[1,2,3,4,5,6,7,8,9]```
+ ``` [1,2,3,4,5,6,7,8,9] ``` 
 
 **remove**(element/[elements])
 *Remove elements in an array*
 
 - example 1
 
-	```[1,2,3,3].remove(3)```
-
-	result
-
-	```[1,2]```
+	 ``` [1,2,3,3].remove(3) ```  
+	
+	result 
+	
+	 ``` [1,2] ``` 
 
 - example 2
 
-	```["A","B","C","D","E","F"].remove(["A","B","C"])```
-
-	result
-
-	```["D","E","F"]```
+	 ``` ["A","B","C","D","E","F"].remove(["A","B","C"]) ```  
+	
+	result 
+	
+	 ``` ["D","E","F"] ``` 
 
 **generateScale**(type,style,start,end,interval)
 *generate an array of specific element*
 
 - example 1
 
-	```var myarray = Array().generateScale('letters','upper','a','c',null)```
-
-	result
-
-	```["A","B","C"]```
+	 ``` var myarray = Array().generateScale('letters','upper','a','c',null) ```  
+	
+	result 
+	
+	 ``` ["A","B","C"] ``` 
 
 - example 2
 
-	```var myarray = Array().generateScale('letters','lower','a','f',2)``` result ```["a","c","e"]```
+	 ``` var myarray = Array().generateScale('letters','lower','a','f',2) ```  
+
+	result 
+
+	 ``` ["a","c","e"] ``` 
 
 - example 3
 
-	```var myarray = Array().generateScale('numbers',null,0,9,3)``` result ```[0,3,6,9]```
+	 ``` var myarray = Array().generateScale('numbers',null,0,9,3) ```  
+
+	result 
+
+	 ``` [0,3,6,9] ``` 
 
 - example 4
 
-	```var myarray = Array().generateScale('numbers',null,-9,0,1)``` result ```[-9,-8,-7,-6,-5,-4,-3,-2,-1,0]```
+	 ``` var myarray = Array().generateScale('numbers',null,-9,0,1) ```  
+
+	result 
+
+	 ``` [-9,-8,-7,-6,-5,-4,-3,-2,-1,0] ``` 
 
 **even**
 *Take all even numbers in an array*
 
-```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()``` result ```[2,4,6,8,8,6,4]```
+ ``` [1,2,3,3,4,5,6,7,8,8,9,6,5,4].even() ```  
+
+result 
+
+ ``` [2,4,6,8,8,6,4] ``` 
 
 **evenIndex**
 *Take all even index in an array*
 
-```["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex()``` result ```["a","b","c","d","e","f"]```
+ ``` ["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex() ```  
+
+result 
+
+ ``` ["a","b","c","d","e","f"] ``` 
 
 **odd**
 *Take all odd numbers in an array*
 
-```[1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd()``` result ```[1,3,3,5,7,9,5]```
+ ``` [1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd() ```  
+
+result 
+
+ ``` [1,3,3,5,7,9,5] ``` 
 
 **oddIndex**
 *Take all odd index in an array*
 
-```["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex()``` result ```["A","B","C","D","E","F"]```
+ ``` ["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex() ```  
+
+result 
+
+ ``` ["A","B","C","D","E","F"] ``` 
 
 ***
 
@@ -138,24 +166,40 @@ result
 **formatMoney**(decimals)
 *Convert integer o float number in a money value*
 
-```1000000.12.formatMoney(2)``` result ```"1,000,000.12"```
+ ``` 1000000.12.formatMoney(2) ```  
+
+result 
+
+ ``` "1,000,000.12" ``` 
 
 **getSecond**(hours,minutes,seconds)
 *Return seconds*
 
-```Number().getSecond(1,1,1)``` result ```3661```
+ ``` Number().getSecond(1,1,1) ```  
+
+result 
+
+ ``` 3661 ``` 
 
 **getMilliSecond**(hours,minutes,seconds)
 *Return milliseconds*
 
-```Number().getMilliSecond(1,1,1)``` result ```3661000```
+ ``` Number().getMilliSecond(1,1,1) ```  
+
+result 
+
+ ``` 3661000 ``` 
 
 **isEven**
 *Check is the number is even*
 
-```var n = 124;```
+ ``` var n = 124; ``` 
 
-```n.isEven()``` result ```true```
+ ``` n.isEven() ```  
+
+result 
+
+ ``` true ``` 
 
 ***
 
@@ -168,33 +212,43 @@ result
 **concatElements**
 *Concat more Objects in a single Object.git tag*
 
-```Object().concatElements([{key1:'value1'},{key2:'value2'},{key3:'value3'}])``` result ```{key1:"value1",key2:"value2",key3:"value3"}```
+ ``` Object().concatElements([{key1:'value1'},{key2:'value2'},{key3:'value3'}]) ```  
+
+result 
+
+ ``` {key1:"value1",key2:"value2",key3:"value3"} ``` 
 
 **generator**
 *Generate Objects from an array [key,value,key2,value2,key3,value3.....]*
 
-``` var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"}; ```
+ ``` Object().generator(["key1","value1","key2",{subkey1:"subvalue1",subkey2:"subvalue2"},"key3",["subvalue1","subvalue2"]]) ```  
 
-```a.length()``` result ```5```
+result 
+
+ ``` {key1:"value1",key2:{subkey1:"subvalue1",subkey2:"subvalue2"},key3:["subvalue1","subvalue2"]} ``` 
 
 **lengthObject**
 *Count elements*
 
-``` var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"}; ```
+ ```  var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"};  ``` 
 
-```a.length()``` result ```5```
+ ``` a.length() ```  
+
+result 
+
+ ``` 5 ``` 
 
 
 **splitElements**
 *Split element in an array of single elements*
 
-```var a = {key1:"value1",key2:"value2",key3:"value3"};```
+ ``` var a = {key1:"value1",key2:"value2",key3:"value3"}; ``` 
 
-```a.splitElements()```
+ ``` a.splitElements() ```  
 
-result
+result 
 
-```[{key1:'value1'},{key2:'value2'},{key3:'value3'}]```
+ ``` [{key1:'value1'},{key2:'value2'},{key3:'value3'}] ``` 
 
 ***
 
@@ -216,69 +270,139 @@ result
 **capitalize**
 *Capitalize first letter in a word*
 
-```'test'.capitalize()``` result ```"Test"```
+ ``` 'test'.capitalize() ```  
+
+result 
+
+ ``` "Test" ``` 
 
 **capitalizeAll**
 *Capitalize all first letters of all word contained in a sentence separate by space*
 
-```'test test Test test'.capitalizeAll()``` result ```"Test Test Test Test"```
+ ``` 'test test Test test'.capitalizeAll() ```  
+
+result 
+
+ ``` "Test Test Test Test" ``` 
 
 **getDateEU**
-*Convert ```new Date``` in european format date*
+*Convert  ``` new Date ```  in european format date*
 
-```String(new Date).getDateEU()``` result ```dd/mm/yyyy```
+ ``` String(new Date).getDateEU() ```  
+
+result 
+
+ ``` dd/mm/yyyy ``` 
 
 **getDateUS**
-*Convert ```new Date``` in american format date*
+*Convert  ``` new Date ```  in american format date*
 
-```String(new Date).getDateUS()``` result ```mm/dd/yyyy```
+ ``` String(new Date).getDateUS() ```  
+
+result 
+
+ ``` mm/dd/yyyy ``` 
 
 **getDbDate**
-*Convert Database formar date ```2015-03-18T16:23:18.423Z``` in european format date*
+*Convert Database formar date  ``` 2015-03-18T16:23:18.423Z ```  in european format date*
 
-```'2015-03-18T16:23:18.423Z'.getDbDate()``` result ```dd/mm/yyyy```
+ ``` '2015-03-18T16:23:18.423Z'.getDbDate() ```  
+
+result 
+
+ ``` dd/mm/yyyy ``` 
 
 **getDbDateTime**
-*Convert Database formar date ```2015-03-18T16:23:18.423Z``` in european format date and time*
+*Convert Database formar date  ``` 2015-03-18T16:23:18.423Z ```  in european format date and time*
 
-```'2015-03-18T16:23:18.423Z'.getDbDateTime()``` result ```dd/mm/yyyy - hh:mm:ss```
+ ``` '2015-03-18T16:23:18.423Z'.getDbDateTime() ```  
+
+result 
+
+ ``` dd/mm/yyyy - hh:mm:ss ``` 
 
 **htmlEscape**
 *Convert normal string in a html string*
 
-```'Marco&Co'.htmlEscape()``` result ```Marco&#38;Co```
+ ``` 'Marco&Co'.htmlEscape() ```  
+
+result 
+
+ ``` Marco&#38;Co ``` 
 
 **htmlUnescape**
 *Convert html string in a normal string*
 
-```'Marco&#38;Co'.htmlUnescape()``` result ```Marco&Co```
+ ``` 'Marco&#38;Co'.htmlUnescape() ```  
+
+result 
+
+ ``` Marco&Co ``` 
 
 **repeat**
 *Repeat a word 'n' times*
 
-```'test0'.repeat(3)``` result ```"test0test0test0"```
+ ``` 'test0'.repeat(3) ```  
+
+result 
+
+ ``` "test0test0test0" ``` 
 
 **reverseWord**
 *Reverse a word*
 
-```'test0'.reverseWord()``` result ```"0tset"```
+ ``` 'test0'.reverseWord() ```  
+
+result 
+
+ ``` "0tset" ``` 
 
 **substringBeforeTo**
 *Return substring before an symbol*
 
-```'test0.test1'.substringBeforeTo('.')``` result ```"test0"```
+ ``` 'test0.test1'.substringBeforeTo('.') ```  
+
+result 
+
+ ``` "test0" ``` 
 
 **substringAfterTo**
 *Return substring after an symbol if the symbol is contained more times return an array*
 
-```'test0.test1'.substringAfterTo('.')``` result ```"test1"```
-```'test0.test1.test2.test3'.substringAfterTo('.')``` result ```["test1","test2","test3"]```
+- example 1
+
+ 	``` 'test0.test1'.substringAfterTo('.') ```  
+
+	result 
+
+	 ``` "test1" ``` 
+
+- example 2
+
+ 	``` 'test0.test1.test2.test3'.substringAfterTo('.') ```  
+
+	result 
+
+ 	``` ["test1","test2","test3"] ``` 
 
 **validateContent**
 *Validate content in a string*
 
-```'mak.so1979@gmail.com'.validateContent('email')``` result ```true```
-```'mak.so1979gmailcom'.validateContent('email')``` result ```false```
+- example 1
+
+	 ``` 'mak.so1979@gmail.com'.validateContent('email') ```  
+
+	result 
+
+	 ``` true ``` 
+
+- example 2
+
+	 ``` 'mak.so1979gmailcom'.validateContent('email') ```  
+
+	result 
+
+	 ``` false ``` 
 
 
 ***
