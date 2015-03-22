@@ -1,6 +1,6 @@
 [![NPM](https://nodei.co/npm/my-prototypes.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/my-prototypes/)
 
-[![](https://img.shields.io/badge/version-BETA%20--%20in%20porgress-red.svg)](https://www.npmjs.com/package/my-prototypes)
+[![](https://img.shields.io/badge/version-STABLE-brightgreen.svg)](https://www.npmjs.com/package/my-prototypes)
 
 [![](https://img.shields.io/badge/autor-Marco%20Somma-lightgrey.svg?style=flat)](https://www.npmjs.com/~marcosomma) [![](https://img.shields.io/badge/license-ISC-blue.svg?style=flat)](https://www.npmjs.com/package/my-prototypes) [![npm](https://img.shields.io/npm/dm/my-prototypes.svg)](https://www.npmjs.com/package/my-prototypes)
 
