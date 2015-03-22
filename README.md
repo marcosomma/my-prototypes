@@ -209,7 +209,7 @@ result
 - lengthObject
 - splitElements
 
-####concatElements
+####concatElements([{key1:value1},{key2:value2},{key3:value3}])
 *Concat more Objects in a single Object.git tag*
 
  ``` Object().concatElements([{key1:'value1'},{key2:'value2'},{key3:'value3'}]) ```  
@@ -218,8 +218,8 @@ result
 
  ``` {key1:"value1",key2:"value2",key3:"value3"} ``` 
 
-####generator
-*Generate Objects from an array [key,value,key2,value2,key3,value3.....]*
+####generator([key,value,key2,value2,key3,value3.....])
+*Generate Objects from an array*
 
  ``` Object().generator(["key1","value1","key2",{subkey1:"subvalue1",subkey2:"subvalue2"},"key3",["subvalue1","subvalue2"]]) ```  
 
