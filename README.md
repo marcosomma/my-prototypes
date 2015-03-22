@@ -152,7 +152,7 @@ Add Array, Numbers, Object and String prototypes in your project.
 **concatElements**
 *Concat more Objects in a single Object.git tag*
 
-```Object().concatElements([{key1:'value1'},{key2:'value2'},{key3:'value3'}])``` result ```[{key1:"value1",key2:"value2",key3:"value3"}]```
+```Object().concatElements([{key1:'value1'},{key2:'value2'},{key3:'value3'}])``` result ```{key1:"value1",key2:"value2",key3:"value3"}```
 
 ***
 
