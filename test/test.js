@@ -203,7 +203,7 @@ describe('#Object', function() {
         a.splitElements()[1].key2.should.equal("value2");
         a.splitElements()[2].key3.should.equal("value3");
     });
-    it('Concat Objects in an array [{key1:"value1"},{key2:"value2"},{key3:"value3" result {key1:"value1",key2:"value2",key3:"value3"}', function() {
+    it('Concat Objects in an array [{key1:"value1"},{key2:"value2"},{key3:"value3"}] result {key1:"value1",key2:"value2",key3:"value3"}', function() {
         Object().concatElements([{key1:"value1"},{key2:"value2"},{key3:"value3"}]).key1.should.equal("value1");
         Object().concatElements([{key1:"value1"},{key2:"value2"},{key3:"value3"}]).key2.should.equal("value2");
         Object().concatElements([{key1:"value1"},{key2:"value2"},{key3:"value3"}]).key3.should.equal("value3");
