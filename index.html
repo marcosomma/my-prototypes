@@ -46,7 +46,7 @@
 <code>npm install my-prototypes</code></p>
 
 <p><strong>Use</strong>
-<code>require('my-prototypes').init</code></p>
+<code>require('my-prototypes').init()</code></p>
 
 <hr>
 
@@ -54,48 +54,84 @@
 <a id="array-prototypes" class="anchor" href="#array-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array prototypes</h2>
 
 <ul>
+<li>first</li>
+<li>last</li>
 <li>containElement</li>
 <li>eliminateDuplicate</li>
+<li>remove</li>
+<li>generateScale</li>
 <li>even</li>
 <li>evenIndex</li>
-<li>generateScale</li>
 <li>odd</li>
 <li>oddIndex</li>
 </ul>
 
+<p><strong>first</strong>
+<em>First element in an array</em></p>
+
+<p><code>[1,2,3,3,4,5,6,7,8,8,9,6,5,4].first()</code> result <code>1</code></p>
+
+<p><strong>last</strong>
+<em>Last element in an array</em></p>
+
+<p><code>[1,2,3,3,4,5,6,7,8,8,9,6,5,4].last()</code> result <code>4</code></p>
+
 <p><strong>containElement</strong>
 <em>check if an array contain an element</em></p>
 
-<p><code>[["A","B","C","D","E","F"].containElement("A")</code> result <code>true</code></p>
+<p><code>["A","B","C","D","E","F"].containElement("A")</code> result <code>true</code></p>
 
 <p><strong>eliminateDuplicate</strong>
 <em>Eliminate all element duplicated in an array</em></p>
 
 <p><code>[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()</code> result <code>[1,2,3,4,5,6,7,8,9]</code></p>
 
-<p><strong>even</strong>
-<em>Take all even numbers in an array</em></p>
+<p><strong>remove</strong>(element/[elements])
+<em>Remove elements in an array</em></p>
 
-<p><code>[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()</code> result <code>[2,4,6,8,8,6,4]</code></p>
+<ul>
+<li>
+<p>example 1</p>
+
+<p><code>[1,2,3,3].remove(3)</code> result <code>[1,2]</code></p>
+</li>
+<li>
+<p>example 2</p>
+
+<p><code>["A","B","C","D","E","F"].remove(["A","B","C"])</code> result <code>["D","E","F"]</code></p>
+</li>
+</ul>
 
 <p><strong>generateScale</strong>(type,style,start,end,interval)
 <em>generate an array of specific element</em></p>
 
+<ul>
+<li>
 <p>example 1</p>
 
-<p><code>var myarray = [].generateScale('letters','upper','a','c',null)</code> result <code>["A","B","C"]</code></p>
-
+<p><code>var myarray = Array().generateScale('letters','upper','a','c',null)</code> result <code>["A","B","C"]</code></p>
+</li>
+<li>
 <p>example 2</p>
 
-<p><code>var myarray = [].generateScale('letters','lower','a','f',2)</code> result <code>["a","c","e"]</code></p>
-
+<p><code>var myarray = Array().generateScale('letters','lower','a','f',2)</code> result <code>["a","c","e"]</code></p>
+</li>
+<li>
 <p>example 3</p>
 
-<p><code>var myarray = [].generateScale('numbers',null,0,9,3)</code> result <code>[0,3,6,9]</code></p>
-
+<p><code>var myarray = Array().generateScale('numbers',null,0,9,3)</code> result <code>[0,3,6,9]</code></p>
+</li>
+<li>
 <p>example 4</p>
 
-<p><code>var myarray = [].generateScale('numbers',null,-9,0,1)</code> result <code>[-9,-8,-7,-6,-5,-4,-3,-2,-1,0]</code></p>
+<p><code>var myarray = Array().generateScale('numbers',null,-9,0,1)</code> result <code>[-9,-8,-7,-6,-5,-4,-3,-2,-1,0]</code></p>
+</li>
+</ul>
+
+<p><strong>even</strong>
+<em>Take all even numbers in an array</em></p>
+
+<p><code>[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()</code> result <code>[2,4,6,8,8,6,4]</code></p>
 
 <p><strong>evenIndex</strong>
 <em>Take all even index in an array</em></p>
@@ -121,6 +157,7 @@
 <li>formatMoney</li>
 <li>getSecond</li>
 <li>getMilliSecond</li>
+<li>isEven</li>
 </ul>
 
 <p><strong>formatMoney</strong>(decimals)
@@ -137,6 +174,11 @@
 <em>Return milliseconds</em></p>
 
 <p><code>Number().getMilliSecond(1,1,1)</code> result <code>3661000</code></p>
+
+<p><strong>isEven</strong>
+<em>Check is the number is even</em></p>
+
+<p><code>Number(124).isEven()</code> result <code>true</code></p>
 
 <hr>
 
@@ -245,6 +287,15 @@
 
 <p><code>'mak.so1979@gmail.com'.validateContent('email')</code> result <code>true</code>
 <code>'mak.so1979gmailcom'.validateContent('email')</code> result <code>false</code></p>
+
+<hr>
+
+<h3>
+<a id="license-isc" class="anchor" href="#license-isc" aria-hidden="true"><span class="octicon octicon-link"></span></a>License ISC</h3>
+
+<p><em>Copyright (c) 2015, Marco Somma.</em></p>
+
+<p>Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.</p>
       </section>
     </div>
 
