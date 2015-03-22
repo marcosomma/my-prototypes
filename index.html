@@ -44,564 +44,79 @@
 
 <p>Add Array, Numbers, Object and String prototypes in your project.</p>
 
-<h3>
-<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h3>
+<p><strong>Install</strong>
+ <code>npm install my-prototypes</code> </p>
 
-<p><code>npm install my-prototypes</code> </p>
+<p><strong>Use</strong>
+ <code>require('my-prototypes').init()</code> </p>
 
-<h3>
-<a id="use" class="anchor" href="#use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use</h3>
-
-<p><code>require('my-prototypes').init()</code> </p>
+<p>Check the <a href="https://github.com/marcosomma/my-prototypes/wiki">documentation</a> for the usage.</p>
 
 <hr>
 
-<ul>
-<li>
 <h2>
 <a id="array-prototypes" class="anchor" href="#array-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array prototypes</h2>
 
 <ul>
-<li>first</li>
-<li>last</li>
-<li>containElement</li>
-<li>eliminateDuplicate</li>
-<li>remove</li>
-<li>generateScale</li>
-<li>even</li>
-<li>evenIndex</li>
-<li>odd</li>
-<li><p>oddIndex</p></li>
-<li>
-<h3>
-<a id="first" class="anchor" href="#first" aria-hidden="true"><span class="octicon octicon-link"></span></a>first</h3>
-
-<p><em>First element in an array</em></p>
-
-<p><code>[1,2,3,3,4,5,6,7,8,8,9,6,5,4].first()</code></p>
-
-<p>result</p>
-
-<p><code>1</code></p>
-</li>
-<li>
-<h3>
-<a id="last" class="anchor" href="#last" aria-hidden="true"><span class="octicon octicon-link"></span></a>last</h3>
-
-<p><em>Last element in an array</em></p>
-
-<p><code>[1,2,3,3,4,5,6,7,8,8,9,6,5,4].last()</code></p>
-
-<p>result</p>
-
-<p><code>4</code></p>
-</li>
-<li>
-<h3>
-<a id="containelement" class="anchor" href="#containelement" aria-hidden="true"><span class="octicon octicon-link"></span></a>containElement</h3>
-
-<p><em>check if an array contain an element</em></p>
-
-<p><code>["A","B","C","D","E","F"].containElement("A")</code></p>
-
-<p>result</p>
-
-<p><code>true</code></p>
-</li>
-<li>
-<h3>
-<a id="eliminateduplicate" class="anchor" href="#eliminateduplicate" aria-hidden="true"><span class="octicon octicon-link"></span></a>eliminateDuplicate</h3>
-
-<p><em>Eliminate all element duplicated in an array</em></p>
-
-<p><code>[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()</code></p>
-
-<p>result</p>
-
-<p><code>[1,2,3,4,5,6,7,8,9]</code></p>
-</li>
-<li>
-<h3>
-<a id="removeelementelements" class="anchor" href="#removeelementelements" aria-hidden="true"><span class="octicon octicon-link"></span></a>remove(element/[elements])</h3>
-
-<p><em>Remove elements in an array</em></p>
-
-<ul>
-<li>
-<p>example 1</p>
-
-<p><code>[1,2,3,3].remove(3)</code></p>
-
-<p>result</p>
-
-<p><code>[1,2]</code></p>
-</li>
-<li>
-<p>example 2</p>
-
-<p><code>["A","B","C","D","E","F"].remove(["A","B","C"])</code></p>
-
-<p>result</p>
-
-<p><code>["D","E","F"]</code></p>
-</li>
-</ul>
-</li>
-<li>
-<h3>
-<a id="generatescaletypestylestartendinterval" class="anchor" href="#generatescaletypestylestartendinterval" aria-hidden="true"><span class="octicon octicon-link"></span></a>generateScale(type,style,start,end,interval)</h3>
-
-<p><em>generate an array of specific element</em></p>
-
-<ul>
-<li>
-<p>example 1</p>
-
-<p><code>var myarray = Array().generateScale('letters','upper','a','c',null)</code></p>
-
-<p>result</p>
-
-<p><code>["A","B","C"]</code></p>
-</li>
-<li>
-<p>example 2</p>
-
-<p><code>var myarray = Array().generateScale('letters','lower','a','f',2)</code></p>
-
-<p>result</p>
-
-<p><code>["a","c","e"]</code></p>
-</li>
-<li>
-<p>example 3</p>
-
-<p><code>var myarray = Array().generateScale('numbers',null,0,9,3)</code></p>
-
-<p>result</p>
-
-<p><code>[0,3,6,9]</code></p>
-</li>
-<li>
-<p>example 4</p>
-
-<p><code>var myarray = Array().generateScale('numbers',null,-9,0,1)</code></p>
-
-<p>result</p>
-
-<p><code>[-9,-8,-7,-6,-5,-4,-3,-2,-1,0]</code></p>
-</li>
-</ul>
-</li>
-<li>
-<h3>
-<a id="even" class="anchor" href="#even" aria-hidden="true"><span class="octicon octicon-link"></span></a>even</h3>
-
-<p><em>Take all even numbers in an array</em></p>
-
-<p><code>[1,2,3,3,4,5,6,7,8,8,9,6,5,4].even()</code></p>
-
-<p>result</p>
-
-<p><code>[2,4,6,8,8,6,4]</code></p>
-</li>
-<li>
-<h3>
-<a id="evenindex" class="anchor" href="#evenindex" aria-hidden="true"><span class="octicon octicon-link"></span></a>evenIndex</h3>
-
-<p><em>Take all even index in an array</em></p>
-
-<p><code>["a","A","b","B","c","C","d","D","e","E","f","F"].evenIndex()</code></p>
-
-<p>result</p>
-
-<p><code>["a","b","c","d","e","f"]</code></p>
-</li>
-<li>
-<h3>
-<a id="odd" class="anchor" href="#odd" aria-hidden="true"><span class="octicon octicon-link"></span></a>odd</h3>
-
-<p><em>Take all odd numbers in an array</em></p>
-
-<p><code>[1,2,3,3,4,5,6,7,8,8,9,6,5,4].odd()</code></p>
-
-<p>result</p>
-
-<p><code>[1,3,3,5,7,9,5]</code></p>
-</li>
-<li>
-<h3>
-<a id="oddindex" class="anchor" href="#oddindex" aria-hidden="true"><span class="octicon octicon-link"></span></a>oddIndex</h3>
-
-<p><em>Take all odd index in an array</em></p>
-
-<p><code>["a","A","b","B","c","C","d","D","e","E","f","F"].oddIndex()</code></p>
-
-<p>result</p>
-
-<p><code>["A","B","C","D","E","F"]</code></p>
-</li>
-</ul>
-</li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Array#first">first</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Array#last">last</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Array#containelement">containElement</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Array#eliminateduplicate">eliminateDuplicate</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Array#removeelementelements">remove</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Array#generatescaletypestylestartendinterval">generateScale</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Array#even">even</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Array#evenindex">evenIndex</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Array#odd">odd</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Array#oddindex">oddIndex</a></li>
 </ul>
 
 <hr>
 
-<ul>
-<li>
 <h2>
 <a id="number-prototypes" class="anchor" href="#number-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Number prototypes</h2>
 
 <ul>
-<li>formatMoney</li>
-<li>getSecond</li>
-<li>getMilliSecond</li>
-<li><p>isEven</p></li>
-<li>
-<h3>
-<a id="formatmoneydecimals" class="anchor" href="#formatmoneydecimals" aria-hidden="true"><span class="octicon octicon-link"></span></a>formatMoney(decimals)</h3>
-
-<p><em>Convert integer o float number in a money value</em></p>
-
-<p><code>1000000.12.formatMoney(2)</code></p>
-
-<p>result</p>
-
-<p><code>"1,000,000.12"</code></p>
-</li>
-<li>
-<h3>
-<a id="getsecondhoursminutesseconds" class="anchor" href="#getsecondhoursminutesseconds" aria-hidden="true"><span class="octicon octicon-link"></span></a>getSecond(hours,minutes,seconds)</h3>
-
-<p><em>Return seconds</em></p>
-
-<p><code>Number().getSecond(1,1,1)</code></p>
-
-<p>result</p>
-
-<p><code>3661</code></p>
-</li>
-<li>
-<h3>
-<a id="getmillisecondhoursminutesseconds" class="anchor" href="#getmillisecondhoursminutesseconds" aria-hidden="true"><span class="octicon octicon-link"></span></a>getMilliSecond(hours,minutes,seconds)</h3>
-
-<p><em>Return milliseconds</em></p>
-
-<p><code>Number().getMilliSecond(1,1,1)</code></p>
-
-<p>result</p>
-
-<p><code>3661000</code></p>
-</li>
-<li>
-<h3>
-<a id="iseven" class="anchor" href="#iseven" aria-hidden="true"><span class="octicon octicon-link"></span></a>isEven</h3>
-
-<p><em>Check is the number is even</em></p>
-
-<p><code>var n = 124;</code></p>
-
-<p><code>n.isEven()</code></p>
-
-<p>result</p>
-
-<p><code>true</code></p>
-</li>
-</ul>
-</li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Numbers#formatmoneydecimals">formatMoney</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Numbers#getsecondhoursminutesseconds">getSecond</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Numbers#getmillisecondhoursminutesseconds">getMilliSecond</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Numbers#iseven">isEven</a></li>
 </ul>
 
 <hr>
 
-<ul>
-<li>
 <h2>
 <a id="object-prototypes" class="anchor" href="#object-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Object prototypes</h2>
 
 <ul>
-<li>concatElements</li>
-<li>generator</li>
-<li>lengthObject</li>
-<li>splitElements</li>
-<li><p>toArray</p></li>
-<li>
-<h3>
-<a id="concatelementskey1value1key2value2key3value3" class="anchor" href="#concatelementskey1value1key2value2key3value3" aria-hidden="true"><span class="octicon octicon-link"></span></a>concatElements([{key1:value1},{key2:value2},{key3:value3}])</h3>
-
-<p><em>Concat more Objects in a single Object.git tag</em></p>
-
-<p><code>Object().concatElements([{key1:'value1'},{key2:'value2'},{key3:'value3'}])</code></p>
-
-<p>result</p>
-
-<p><code>{key1:"value1",key2:"value2",key3:"value3"}</code></p>
-</li>
-<li>
-<h3>
-<a id="generatorkeyvaluekey2value2key3value3" class="anchor" href="#generatorkeyvaluekey2value2key3value3" aria-hidden="true"><span class="octicon octicon-link"></span></a>generator([key,value,key2,value2,key3,value3.....])</h3>
-
-<p><em>Generate Objects from an array</em></p>
-
-<p><code>Object().generator(["key1","value1","key2",{subkey1:"subvalue1",subkey2:"subvalue2"},"key3",["subvalue1","subvalue2"]])</code></p>
-
-<p>result</p>
-
-<p><code>{key1:"value1",key2:{subkey1:"subvalue1",subkey2:"subvalue2"},key3:["subvalue1","subvalue2"]}</code></p>
-</li>
-<li>
-<h3>
-<a id="lengthobject" class="anchor" href="#lengthobject" aria-hidden="true"><span class="octicon octicon-link"></span></a>lengthObject</h3>
-
-<p><em>Count elements</em></p>
-
-<p><code>var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"};</code></p>
-
-<p><code>a.length()</code></p>
-
-<p>result</p>
-
-<p><code>5</code></p>
-</li>
-<li>
-<h3>
-<a id="splitelements" class="anchor" href="#splitelements" aria-hidden="true"><span class="octicon octicon-link"></span></a>splitElements</h3>
-
-<p><em>Split element in an array of single elements</em></p>
-
-<p><code>var a = {key1:"value1",key2:"value2",key3:"value3"};</code></p>
-
-<p><code>a.splitElements()</code></p>
-
-<p>result</p>
-
-<p><code>[{key1:'value1'},{key2:'value2'},{key3:'value3'}]</code></p>
-</li>
-<li>
-<h3>
-<a id="toarray" class="anchor" href="#toarray" aria-hidden="true"><span class="octicon octicon-link"></span></a>toArray</h3>
-
-<p><em>Generate an array with object values</em></p>
-
-<p><code>var o = {key1:"value1",key2:{subkey1:"subvalue1",subkey2:"subvalue2"},key3:["subvalue1","subvalue2"]};</code></p>
-
-<p><code>o.toArray();</code></p>
-
-<p>result</p>
-
-<p><code>["value1",{subkey1:"subvalue1",subkey2:"subvalue2"},["subvalue1","subvalue2"]]</code></p>
-</li>
-</ul>
-</li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Object#concatelementskey1value1key2value2key3value3">concatElements</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Object#generatorkeyvaluekey2value2key3value3">generator</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Object#lengthobject">lengthObject</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Object#splitelements">splitElements</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Object#toarray">toArray</a></li>
 </ul>
 
 <hr>
 
-<ul>
-<li>
 <h2>
 <a id="string-prototypes" class="anchor" href="#string-prototypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>String prototypes</h2>
 
 <ul>
-<li>capitalize</li>
-<li>capitalizeAll</li>
-<li>getDateEU</li>
-<li>getDateUS</li>
-<li>getDbDate</li>
-<li>getDbDateTime</li>
-<li>htmlEscape (exclude ":", ";" and "#")</li>
-<li>htmlUnescape (exclude ":", ";" and "#")</li>
-<li>repeat</li>
-<li>reverseWord</li>
-<li>substringAfterTo</li>
-<li>substringBeforeTo</li>
-<li><p>validateContent (dateEU, dateUS, time, email, ip-address, alphanumeric and phone)</p></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#capitalize">capitalize</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#capitalizeall">capitalizeAll</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#getdateeu">getDateEU</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#getdateus">getDateUS</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#getdbdate">getDbDate</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#getdbdatetime">getDbDateTime</a></li>
 <li>
-<h3>
-<a id="capitalize" class="anchor" href="#capitalize" aria-hidden="true"><span class="octicon octicon-link"></span></a>capitalize</h3>
-
-<p><em>Capitalize first letter in a word</em></p>
-
-<p><code>'test'.capitalize()</code></p>
-
-<p>result</p>
-
-<p><code>"Test"</code></p>
-</li>
+<a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#htmlescape">htmlEscape</a> (exclude ":", ";" and "#")</li>
 <li>
-<h3>
-<a id="capitalizeall" class="anchor" href="#capitalizeall" aria-hidden="true"><span class="octicon octicon-link"></span></a>capitalizeAll</h3>
-
-<p><em>Capitalize all first letters of all word contained in a sentence separate by space</em></p>
-
-<p><code>'test test Test test'.capitalizeAll()</code></p>
-
-<p>result</p>
-
-<p><code>"Test Test Test Test"</code></p>
-</li>
+<a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#htmlunescape">htmlUnescape</a> (exclude ":", ";" and "#")</li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#repeat">repeat</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#reverseword">reverseWord</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#substringafterto">substringAfterTo</a></li>
+<li><a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#substringbeforeto">substringBeforeTo</a></li>
 <li>
-<h3>
-<a id="getdateeu" class="anchor" href="#getdateeu" aria-hidden="true"><span class="octicon octicon-link"></span></a>getDateEU</h3>
-
-<p><em>Convert  <code>new Date</code>  in european format date</em></p>
-
-<p><code>String(new Date).getDateEU()</code></p>
-
-<p>result</p>
-
-<p><code>dd/mm/yyyy</code></p>
-</li>
-<li>
-<h3>
-<a id="getdateus" class="anchor" href="#getdateus" aria-hidden="true"><span class="octicon octicon-link"></span></a>getDateUS</h3>
-
-<p><em>Convert  <code>new Date</code>  in american format date</em></p>
-
-<p><code>String(new Date).getDateUS()</code></p>
-
-<p>result</p>
-
-<p><code>mm/dd/yyyy</code></p>
-</li>
-<li>
-<h3>
-<a id="getdbdate" class="anchor" href="#getdbdate" aria-hidden="true"><span class="octicon octicon-link"></span></a>getDbDate</h3>
-
-<p><em>Convert Database formar date  <code>2015-03-18T16:23:18.423Z</code>  in european format date</em></p>
-
-<p><code>'2015-03-18T16:23:18.423Z'.getDbDate()</code></p>
-
-<p>result</p>
-
-<p><code>dd/mm/yyyy</code></p>
-</li>
-<li>
-<h3>
-<a id="getdbdatetime" class="anchor" href="#getdbdatetime" aria-hidden="true"><span class="octicon octicon-link"></span></a>getDbDateTime</h3>
-
-<p><em>Convert Database formar date  <code>2015-03-18T16:23:18.423Z</code>  in european format date and time</em></p>
-
-<p><code>'2015-03-18T16:23:18.423Z'.getDbDateTime()</code></p>
-
-<p>result</p>
-
-<p><code>dd/mm/yyyy - hh:mm:ss</code></p>
-</li>
-<li>
-<h3>
-<a id="htmlescape" class="anchor" href="#htmlescape" aria-hidden="true"><span class="octicon octicon-link"></span></a>htmlEscape</h3>
-
-<p><em>Convert normal string in a html string</em></p>
-
-<p><code>'Marco&amp;Co'.htmlEscape()</code></p>
-
-<p>result</p>
-
-<p><code>Marco&amp;#38;Co</code></p>
-</li>
-<li>
-<h3>
-<a id="htmlunescape" class="anchor" href="#htmlunescape" aria-hidden="true"><span class="octicon octicon-link"></span></a>htmlUnescape</h3>
-
-<p><em>Convert html string in a normal string</em></p>
-
-<p><code>'Marco&amp;#38;Co'.htmlUnescape()</code></p>
-
-<p>result</p>
-
-<p><code>Marco&amp;Co</code></p>
-</li>
-<li>
-<h3>
-<a id="repeat" class="anchor" href="#repeat" aria-hidden="true"><span class="octicon octicon-link"></span></a>repeat</h3>
-
-<p><em>Repeat a word 'n' times</em></p>
-
-<p><code>'test0'.repeat(3)</code></p>
-
-<p>result</p>
-
-<p><code>"test0test0test0"</code></p>
-</li>
-<li>
-<h3>
-<a id="reverseword" class="anchor" href="#reverseword" aria-hidden="true"><span class="octicon octicon-link"></span></a>reverseWord</h3>
-
-<p><em>Reverse a word</em></p>
-
-<p><code>'test0'.reverseWord()</code></p>
-
-<p>result</p>
-
-<p><code>"0tset"</code></p>
-</li>
-<li>
-<h3>
-<a id="substringbeforeto" class="anchor" href="#substringbeforeto" aria-hidden="true"><span class="octicon octicon-link"></span></a>substringBeforeTo</h3>
-
-<p><em>Return substring before an symbol</em></p>
-
-<p><code>'test0.test1'.substringBeforeTo('.')</code></p>
-
-<p>result</p>
-
-<p><code>"test0"</code></p>
-</li>
-<li>
-<h3>
-<a id="substringafterto" class="anchor" href="#substringafterto" aria-hidden="true"><span class="octicon octicon-link"></span></a>substringAfterTo</h3>
-
-<p><em>Return substring after an symbol if the symbol is contained more times return an array</em></p>
-
-<ul>
-<li>
-<p>example 1</p>
-
-<p><code>'test0.test1'.substringAfterTo('.')</code></p>
-
-<p>result</p>
-
-<p><code>"test1"</code></p>
-</li>
-<li>
-<p>example 2</p>
-
-<p><code>'test0.test1.test2.test3'.substringAfterTo('.')</code></p>
-
-<p>result</p>
-
-<p><code>["test1","test2","test3"]</code></p>
-</li>
-</ul>
-</li>
-<li>
-<h3>
-<a id="validatecontent" class="anchor" href="#validatecontent" aria-hidden="true"><span class="octicon octicon-link"></span></a>validateContent</h3>
-
-<p><em>Validate content in a string</em></p>
-
-<ul>
-<li>
-<p>example 1</p>
-
-<p><code>'mak.so1979@gmail.com'.validateContent('email')</code></p>
-
-<p>result</p>
-
-<p><code>true</code></p>
-</li>
-<li>
-<p>example 2</p>
-
-<p><code>'mak.so1979gmailcom'.validateContent('email')</code></p>
-
-<p>result</p>
-
-<p><code>false</code></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<a href="https://github.com/marcosomma/my-prototypes/wiki/Strings#validatecontent">validateContent</a> (dateEU, dateUS, time, email, ip-address, alphanumeric and phone)</li>
 </ul>
 
 <hr>
