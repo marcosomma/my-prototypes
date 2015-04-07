@@ -54,14 +54,18 @@ module.exports = {
     },
     getValues: function(searching){
         //console.log('getValues');
+        searching = searching.toArray();
         var result = [];
-        for(var i=0;i<Object.keys(this).length;i++){
-            var obj;
-            obj = Object.keys(this)[i];
-            for(var j=0; j<searching.length; j++){
-                if(obj === searching[j]){
-                    result.push(this[obj]);
+        for(var i=0;i<searching.length;i++){
+            var found = 0;
+            for(var j=0; j<Object.keys(this).length; j++){
+                if(Object.keys(this)[j] === searching[i]){
+                    found = 1;
+                    result.push(this[Object.keys(this)[j]]);
                 }
+            }
+            if(found != 1){
+                result.push(searching[i] + " not found")
             }
         }
         return result;
