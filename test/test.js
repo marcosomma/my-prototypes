@@ -203,6 +203,13 @@ describe('#Object', function() {
         b[0].should.equal("value1");
         b[1].should.equal("value4");
     });
+    it('Get values of specific keys ["key1","key4"] result ["value1","value4"]', function() {
+        var a = {key1:"value1",key2:"value2",key3:"value3",key5:"value5"};
+        var b = a.getValues(['key1','key4']);
+        b.should.have.length(2);
+        b[0].should.equal("value1");
+        b[1].should.equal("key4 not found");
+    });
     it('Split Object in an array of single elements {key1:"value1",key2:"value2",key3:"value3"} result [{key1:"value1"},{key2:"value2"},{key3:"value3"}]', function() {
         var a = {key1:"value1",key2:"value2",key3:"value3"};
         a.splitElements().should.have.length(3);
