@@ -90,7 +90,7 @@ module.exports = {
         //console.log('getDateEU');
         var split = String(this).split(' '),
             month = helper.getMonth(split[1]),
-            day = split[2],
+            day = split[2].length === 1 ? '0' + split[2] : split[2] ,
             year = String(split[3]);
         return day+'/'+month+'/'+year;
     },
@@ -98,7 +98,7 @@ module.exports = {
         //console.log('getDateUS');
         var split = String(this).split(' '),
             month = helper.getMonth(split[1]),
-            day = split[2],
+            day = split[2].length === 1 ? '0' + split[2] : split[2] ,
             year = split[3];
         return month+'/'+day+'/'+year;
     },

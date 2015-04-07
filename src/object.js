@@ -9,6 +9,7 @@ module.exports = {
         Object.prototype.concatElements = this.concatElements;
         Object.prototype.generator = this.generator;
         Object.prototype.toArray = this.toArray;
+        Object.prototype.getValues = this.getValues;
     },
     length: function(){
         //console.log('lengthObject');
@@ -48,6 +49,20 @@ module.exports = {
             var obj;
             obj = this[Object.keys(this)[i]];
             result.push(obj);
+        }
+        return result;
+    },
+    getValues: function(searching){
+        //console.log('getValues');
+        var result = [];
+        for(var i=0;i<Object.keys(this).length;i++){
+            var obj;
+            obj = Object.keys(this)[i];
+            for(var j=0; j<searching.length; j++){
+                if(obj === searching[j]){
+                    result.push(this[obj]);
+                }
+            }
         }
         return result;
     }

@@ -45,6 +45,7 @@ Add Array, Numbers, Object and String prototypes in your project.
 - [lengthObject](https://github.com/marcosomma/my-prototypes/wiki/Object#lengthobject)
 - [splitElements](https://github.com/marcosomma/my-prototypes/wiki/Object#splitelements)
 - [toArray](https://github.com/marcosomma/my-prototypes/wiki/Object#toarray)
+- [getValues](https://github.com/marcosomma/my-prototypes/wiki/Object#getvalueskey1key2keyn)
 
 ***
 

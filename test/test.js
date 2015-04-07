@@ -7,17 +7,17 @@ var should = require('chai').should(),
     init = prototypes.init,
     dbDate = '2015-03-18T16:23:18.423Z',
     today = new Date(),
-    dateEU = today.getUTCDate() + "/"
-        + (today.getMonth()+1)  + "/"
+    dateEU = (today.getUTCDate()<10 ? '0'+today.getUTCDate() : today.getUTCDate()) + "/"
+        + (today.getMonth()+1<10 ? '0'+(today.getMonth()+1) : (today.getMonth()+1)) + "/"
         + today.getFullYear(),
-    dateUS = (today.getMonth()+1) + "/"
-        + today.getUTCDate() + "/"
+    dateUS = (today.getMonth()+1<10 ? '0'+(today.getMonth()+1) : (today.getMonth()+1)) + "/"
+        + (today.getUTCDate()<10 ? '0'+today.getUTCDate() : today.getUTCDate()) + "/"
         + today.getFullYear(),
-    wrongDateUS = (today.getMonth()+1) + "0/"
-        + today.getDay() + "0/"
+    wrongDateUS = (today.getMonth()+1) + "9/"
+        + today.getDay() + "9/"
         + today.getFullYear(),
-    wrongDateEU = today.getDay() + "0/"
-        + (today.getMonth()+1)  + "0/"
+    wrongDateEU = today.getDay() + "9/"
+        + (today.getMonth()+1)  + "9/"
         + today.getFullYear(),
     time = today.getHours() + ":"
         + today.getMinutes() + ":"
@@ -195,6 +195,13 @@ describe('#Object', function() {
     it('Count element in {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"} result 5', function() {
         var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"};
         a.length().should.equal(5);
+    });
+    it('Get values of specific keys ["key1","key4"] result ["value1","value4"]', function() {
+        var a = {key1:"value1",key2:"value2",key3:"value3",key4:"value4",key5:"value5"};
+        var b = a.getValues(['key1','key4']);
+        b.should.have.length(2);
+        b[0].should.equal("value1");
+        b[1].should.equal("value4");
     });
     it('Split Object in an array of single elements {key1:"value1",key2:"value2",key3:"value3"} result [{key1:"value1"},{key2:"value2"},{key3:"value3"}]', function() {
         var a = {key1:"value1",key2:"value2",key3:"value3"};
@@ -392,15 +399,15 @@ describe('#String', function() {
 
 describe('#Helper', function() {
     it('Test gerMonth', function() {
-        helper.getMonth('Jan').should.equal('1');
-        helper.getMonth('Feb').should.equal('2');
-        helper.getMonth('Mar').should.equal('3');
-        helper.getMonth('Apr').should.equal('4');
-        helper.getMonth('May').should.equal('5');
-        helper.getMonth('June').should.equal('6');
-        helper.getMonth('July').should.equal('7');
-        helper.getMonth('Aug').should.equal('8');
-        helper.getMonth('Sept').should.equal('9');
+        helper.getMonth('Jan').should.equal('01');
+        helper.getMonth('Feb').should.equal('02');
+        helper.getMonth('Mar').should.equal('03');
+        helper.getMonth('Apr').should.equal('04');
+        helper.getMonth('May').should.equal('05');
+        helper.getMonth('June').should.equal('06');
+        helper.getMonth('July').should.equal('07');
+        helper.getMonth('Aug').should.equal('08');
+        helper.getMonth('Sept').should.equal('09');
         helper.getMonth('Oct').should.equal('10');
         helper.getMonth('Nov').should.equal('11');
         helper.getMonth('Dic').should.equal('12');
