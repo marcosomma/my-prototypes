@@ -4,11 +4,12 @@ machine:
 
 dependencies:
   pre:
+    - curl -L https://github.com/codeclimate/codeclimate/archive/master.tar.gz | tar xvz
+    - cd codeclimate-* && sudo make install && cd .. && rm -rf codeclimate-*
     - npm install -g codeclimate-test-reporter
     - npm install -g mocha
     - npm install -g chai
     - npm install -g istanbul
-    - npm install -g codeclimate-test-reporter
     - npm install -g grunt
     - npm install -g grunt-cli
     - npm install -g grunt-init
