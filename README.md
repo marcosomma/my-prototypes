@@ -14,7 +14,7 @@ Add Array, Numbers, Object and String prototypes in your project.
  ```  require('my-prototypes').init()  ```
 
  Check the [documentation](https://github.com/marcosomma/my-prototypes/wiki) for the usage.
- [Version 0.7.2](https://github.com/marcosomma/my-prototypes/wiki#version-072)
+ [Version 0.7.4](https://github.com/marcosomma/my-prototypes/wiki#version-074)
 
 ***
 
