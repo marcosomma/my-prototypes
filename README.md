@@ -2,16 +2,16 @@
 
 [![](https://img.shields.io/badge/autor-Marco%20Somma-lightgrey.svg?style=flat)](https://www.npmjs.com/~marcosomma) [![](https://img.shields.io/badge/license-ISC-blue.svg?style=flat)](https://www.npmjs.com/package/my-prototypes) [![npm](https://img.shields.io/npm/dm/my-prototypes.svg)](https://www.npmjs.com/package/my-prototypes)
 
-[![npm version](https://badge.fury.io/js/my-prototypes.svg)](http://badge.fury.io/js/my-prototypes) [![](https://img.shields.io/badge/version-STABLE-brightgreen.svg)](https://www.npmjs.com/package/my-prototypes) [![Codacy Badge](https://www.codacy.com/project/badge/ac6c42fb818542abaad4fb0fd05f39f1)](https://www.codacy.com/public/makso1979/my-prototypes) [![Code Climate](https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![Test Coverage](https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![CircleCI branch](https://img.shields.io/circleci/project/marcosomma/my-prototypes/master.svg)](https://circleci.com/gh/marcosomma/my-prototypes/tree/master)
+[![npm version](https://badge.fury.io/js/my-prototypes.svg)](http://badge.fury.io/js/my-prototypes) [![](https://img.shields.io/badge/version-STABLE-brightgreen.svg)](https://www.npmjs.com/package/my-prototypes) [![Codacy Badge]([![Codacy Badge](https://api.codacy.com/project/badge/grade/a2ee79ed96884b899115ae44106537f8)](https://www.codacy.com/app/makso1979/my-prototypes)) [![Code Climate](https://codeclimate.com/github/marcosomma/my-prototypes/badges/gpa.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![Test Coverage](https://codeclimate.com/github/marcosomma/my-prototypes/badges/coverage.svg)](https://codeclimate.com/github/marcosomma/my-prototypes) [![CircleCI branch](https://img.shields.io/circleci/project/marcosomma/my-prototypes/master.svg)](https://circleci.com/gh/marcosomma/my-prototypes/tree/master)
 
 # my-prototypes
 Add Array, Numbers, Object and String prototypes in your project.
 
 **Install**
- ``` npm install my-prototypes ``` 
+ ``` npm install my-prototypes ```
 
 **Use**
- ```  require('my-prototypes').init()  ``` 
+ ```  require('my-prototypes').init()  ```
 
  Check the [documentation](https://github.com/marcosomma/my-prototypes/wiki) for the usage.
  [Version 0.7.2](https://github.com/marcosomma/my-prototypes/wiki#version-072)
