@@ -11,20 +11,7 @@ module.exports = function(grunt){
         shell: {
             code_climate: {
                 command:[
-                    'codeclimate< ./coverage/lcov.info'
-                ].join('&&'),
-                options: {
-                    stderr: false,
-                    execOptions: {
-                        cwd: ''
-                    }
-                }
-            }
-        },
-        shell: {
-            code_climate_build: {
-                command:[
-                    'codeclimate/codeclimate< ./coverage/lcov.info'
+                    'codeclimate-test-reporter < ./coverage/lcov.info'
                 ].join('&&'),
                 options: {
                     stderr: false,
@@ -45,9 +32,6 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-mocha-istanbul');
 
     grunt.registerTask('coverage', [
-        'mocha_istanbul:coverage',
-        'shell:code_climate']);
-    grunt.registerTask('coverage_build', [
         'mocha_istanbul:coverage',
         'shell:code_climate']);
 };
