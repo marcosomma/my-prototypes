@@ -8,7 +8,6 @@ machine:
 
 dependencies:
   pre:
-    - cd codeclimate-* && sudo make install && cd .. && rm -rf codeclimate-*
     - npm install -g codeclimate-test-reporter
     - npm install -g mocha
     - npm install -g chai
