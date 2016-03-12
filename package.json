@@ -4,7 +4,8 @@
   "description": "Add Array, Numbers, Object and String prototypes in your project.",
   "main": "index.js",
   "scripts": {
-    "test": "grunt coverage"
+    "test": "grunt coverage",
+    "test_build": "grunt coverage_build"
   },
   "repository": {
     "type": "git",

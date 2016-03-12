@@ -20,6 +20,19 @@ module.exports = function(grunt){
                     }
                 }
             }
+        },
+        shell: {
+            code_climate_build: {
+                command:[
+                    'codeclimate/codeclimate< ./coverage/lcov.info'
+                ].join('&&'),
+                options: {
+                    stderr: false,
+                    execOptions: {
+                        cwd: ''
+                    }
+                }
+            }
         }
     });
 
@@ -32,6 +45,9 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-mocha-istanbul');
 
     grunt.registerTask('coverage', [
+        'mocha_istanbul:coverage',
+        'shell:code_climate']);
+    grunt.registerTask('coverage_build', [
         'mocha_istanbul:coverage',
         'shell:code_climate']);
 };

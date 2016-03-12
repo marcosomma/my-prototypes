@@ -2,9 +2,12 @@ machine:
   environment:
     CODECLIMATE_REPO_TOKEN : 5fbffedf45c6f78952b3313671300948260aaf2fc7d05d0a01086b2950a9fd3c
 
+machine:
+  services:
+    - docker
+
 dependencies:
   pre:
-    - curl -L https://github.com/codeclimate/codeclimate/archive/master.tar.gz | tar xvz
     - cd codeclimate-* && sudo make install && cd .. && rm -rf codeclimate-*
     - npm install -g codeclimate-test-reporter
     - npm install -g mocha
@@ -15,3 +18,10 @@ dependencies:
     - npm install -g grunt-init
     - npm install -g grunt-shell
     - npm install -g grunt-mocha-istanbul
+    - docker pull codeclimate/codeclimate
+    - docker run \
+      --interactive --tty --rm \
+      --env CODE_PATH="$PWD" \
+      --volume "$PWD":/code \
+      --volume /var/run/docker.sock:/var/run/docker.sock \
+      --volume /tmp/cc:/tmp/cc \
