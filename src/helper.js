@@ -67,7 +67,7 @@ module.exports={
             case 'Nov':
                 month ='11' ;
                 break;
-            case 'Dic':
+            case 'Dec':
                 month ='12' ;
                 break;
         }

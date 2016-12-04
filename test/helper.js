@@ -14,6 +14,6 @@ describe('#Helper', function() {
         helper.getMonth('Sept').should.equal('09');
         helper.getMonth('Oct').should.equal('10');
         helper.getMonth('Nov').should.equal('11');
-        helper.getMonth('Dic').should.equal('12');
+        helper.getMonth('Dec').should.equal('12');
     });
 });
